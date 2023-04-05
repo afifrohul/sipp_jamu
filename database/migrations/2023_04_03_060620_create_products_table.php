@@ -18,9 +18,9 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->text('image');
+            $table->foreignId('seller_id');
             $table->integer('price');
             $table->integer('stock');
-            $table->foreignId('user_id');
             $table->timestamps();
         });
     }
