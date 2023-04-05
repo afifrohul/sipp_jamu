@@ -1,7 +1,7 @@
 <div class="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-6 border-b border-gray-300">
     <div class="flex-none w-56 flex flex-row items-center">
         <img src="{{asset('assets/logos/Logo HMIF Compress.png')}}" class="h-10 flex-none">
-        <strong class="capitalize ml-5 flex-1">HMIFUNEJ Admin</strong>
+        <strong class="capitalize ml-5 flex-1">Farmer</strong>
         <button id="sliderBtn" class="flex-none text-right text-gray-900 hidden md:block">
             <i class="fad fa-list-ul"></i>
         </button>
@@ -30,7 +30,7 @@
                         <i class="fad fa-user-edit text-xs mr-1"></i> 
                         edit my profile
                     </a>
-                    <form method="POST" action="{{ route('back-logout') }}">
+                    <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="w-full text-left px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
                             <i class="fad fa-user-times text-xs mr-1"></i> 

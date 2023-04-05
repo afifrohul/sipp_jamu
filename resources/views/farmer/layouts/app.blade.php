@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
   <link rel="icon" href="{{ asset('assets/logos/Logo HMIF Compress.png') }}" type="image/x-icon">
-  <title>HMIFUNEJ | Admin</title>
+  <title>Dashboard Farmer</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
@@ -16,9 +16,9 @@
   @yield('extraCSS')
 </head>
 <body class="bg-gray-100">
-    @include('admin.components.navbar')
+    @include('farmer.components.navbar')
     <div class="h-screen flex flex-row flex-wrap">
-        @include('admin.components.sidebar')
+        @include('farmer.components.sidebar')
         <div class="bg-gray-100 flex-1 p-6 md:mt-16"> 
             <div>
                 @if (session('status'))

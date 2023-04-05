@@ -176,7 +176,6 @@ class ProductController extends Controller
     {
         try {
             Product::find($product->id)->delete();
-            // $product->delete();
             return redirect('/back-seller/product')->withStatus('Berhasil menghapus data.');
         } catch(\Throwable $e){
             return redirect()->back()->withError($e->getMessage());

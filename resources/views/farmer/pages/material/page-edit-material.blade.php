@@ -1,17 +1,17 @@
-@extends('seller.layouts.app')
+@extends('farmer.layouts.app')
 @section('content')
 <div>
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">Edit Produk</h1>
+            <h1 class="h6">Edit Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-seller/product/update',$getDetailProduct->id)}}" enctype="multipart/form-data">
+            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
                 <div>
-                    <label class="text-gray-700 ml-1">Nama Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->name}}">
+                    <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->name}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -19,8 +19,8 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Deskripsi Produk: </label>
-                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->description}}">
+                    <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
+                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->description}}">
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Harga(Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->price}}">
+                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->price}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -37,8 +37,8 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Stok: </label>
-                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->stock}}">
+                    <label class="text-gray-700 ml-1">Stok (gram): </label>
+                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->stock}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -63,7 +63,7 @@
                         <div class='flex items-center justify-center w-full mt-2'>
                             <label class='flex flex-col border-4 border-dashed w-full h-auto border-teal-500 group bg-gray-300'>
                                     <div class='flex flex-col items-center justify-center py-1'>
-                                        <img id="preview" src="{{asset('assets/upload/product')}}/{{$getDetailProduct->image}}" alt="preview" class="object-cover h-32">
+                                        <img id="preview" src="{{asset('assets/upload/material')}}/{{$getDetailMaterial->image}}" alt="preview" class="object-cover h-32">
                                     </div>
                             </label>
                         </div>

@@ -20,7 +20,7 @@ class CreateMaterialsTable extends Migration
             $table->text('image');
             $table->integer('price');
             $table->integer('stock');
-            $table->foreignId('user_id');
+            $table->foreignId('farmer_id');
             $table->timestamps();
         });
     }

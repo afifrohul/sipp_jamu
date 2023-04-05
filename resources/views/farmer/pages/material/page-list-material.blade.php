@@ -1,4 +1,4 @@
-@extends('seller.layouts.app')
+@extends('farmer.layouts.app')
 @section('extraCSS')
 <link href="{{ asset('assets/vendor-admin/summernote/summernote.min.css') }}" rel="stylesheet">
 @endsection
@@ -6,13 +6,13 @@
 <div>
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">Tambah Produk</h1>
+            <h1 class="h6">Tambah Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-seller/product/new')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{url('/back-farmer/material/new')}}" enctype="multipart/form-data">
                 @csrf
                 <div>
-                    <label class="text-gray-700 ml-1">Nama Produk: </label>
+                    <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
                     <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -21,7 +21,7 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Deskripsi Produk: </label>
+                    <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
                     <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -39,7 +39,7 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Stok:</label>
+                    <label class="text-gray-700 ml-1">Stok (gram):</label>
                     <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="5000" value="{{old('stock')}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -65,7 +65,7 @@
                         <div class='flex items-center justify-center w-full mt-2'>
                             <label class='flex flex-col border-4 border-dashed w-full h-auto border-teal-500 group bg-gray-300'>
                                     <div class='flex flex-col items-center justify-center py-1'>
-                                        <img id="preview" src="{{asset('assets/upload/product/default.png')}}" alt="preview" class="object-cover h-32">
+                                        <img id="preview" src="{{asset('assets/upload/material/default.png')}}" alt="preview" class="object-cover h-32">
                                     </div>
                             </label>
                         </div>
@@ -79,7 +79,7 @@
     </div>
     <div class="card">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">List Produk</h1>
+            <h1 class="h6">List Bahan Baku</h1>
         </div>
         <div class="card-body">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
@@ -90,16 +90,16 @@
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Produk
+                                Nama Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Deskripsi Produk
+                                Deskripsi Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Harga
+                                Harga (per gram)
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Stok Tersedia
+                                Stok Tersedia (gram)
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Foto
@@ -110,7 +110,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach ($getAllProduct as $item)
+                        @foreach ($getAllMaterial as $item)
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$loop->iteration}}</div>
@@ -129,16 +129,16 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">
-                                    <img class="h-16 object-cover m-auto" src="{{asset('assets/upload/product')}}/{{$item->image}}">
+                                    <img class="h-16 object-cover m-auto" src="{{asset('assets/upload/material')}}/{{$item->image}}">
                                 </div>
                             </td>
                             
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
-                                <form action="{{url('/back-seller/product/edit',$item->id)}}" method="POST" class="inline">
+                                <form action="{{url('/back-farmer/material/edit',$item->id)}}" method="POST" class="inline">
                                     @csrf
                                     <button type="submit" class="bg-teal-500 h-10 w-10 rounded hover:bg-teal-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
-                                <form action="{{url('/back-seller/product/destroy',$item->id)}}" method="POST" class="inline">
+                                <form action="{{url('/back-farmer/material/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>

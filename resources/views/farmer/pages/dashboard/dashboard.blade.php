@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('farmer.layouts.app')
 @section('content')
 <div>
     <div class="grid grid-cols-4 gap-6 xl:grid-cols-1">
@@ -9,8 +9,8 @@
                         <div class="h6 text-indigo-700 fad fa-users"></div>
                     </div>
                     <div class="mt-8">
-                        <h1 class="h5"> Orang Pengurus</h1>
-                        <p>Total Kepengurusan Periode 2022-2023</p>
+                        <h1 class="h5"> {{ $getCountMaterial }} Bahan Baku</h1>
+                        <p>Total Bahan Baku</p>
                     </div>            
                 </div>
             </div>
