@@ -65,7 +65,7 @@ class MaterialController extends Controller
             $material = new Material();
             $material->name = $request->name;
             $material->description = $request->description;
-            $material->farmer_id = 3;
+            $material->farmer_id = 2;
             $material->price = $request->price;
             $material->stock = $request->stock;
             if ($request->file('image')) {

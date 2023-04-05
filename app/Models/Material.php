@@ -10,4 +10,9 @@ class Material extends Model
     use HasFactory;
     protected $table = 'materials';
     protected $primaryKey = 'id';
+
+    public function farmer()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

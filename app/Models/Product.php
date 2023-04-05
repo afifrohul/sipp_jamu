@@ -10,4 +10,14 @@ class Product extends Model
     use HasFactory;
     protected $table = 'products';
     protected $primaryKey = 'id';
+
+    public function review()
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public function seller()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
