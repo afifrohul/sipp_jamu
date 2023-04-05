@@ -21,7 +21,9 @@ class UserSeeder extends Seeder
     {
       $admin = User::create([
         'name' => 'adminafif01',
-        'email' => 'afifmemyself22@gmail.com',
+        'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
+        'image' => 'default.png',
+        'email' => 'adminafif01@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('admin01'),
         'remember_token' => \Str::random(60),
@@ -32,8 +34,10 @@ class UserSeeder extends Seeder
       $admin->assignRole('admin');
       
       $petani = User::create([
-        'name' => 'petani01',
-        'email' => 'petani01@gmail.com',
+        'name' => 'petaniafif01',
+        'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
+        'image' => 'default.png',
+        'email' => 'petaniafif01@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('petani01'),
         'remember_token' => \Str::random(60),
@@ -44,8 +48,10 @@ class UserSeeder extends Seeder
       $petani->assignRole('petani');
       
       $penjual = User::create([
-        'name' => 'penjual01',
-        'email' => 'penjual01@gmail.com',
+        'name' => 'penjualafif01',
+        'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
+        'image' => 'default.png',
+        'email' => 'penjualafif01@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('penjual01'),
         'remember_token' => \Str::random(60),
@@ -56,8 +62,10 @@ class UserSeeder extends Seeder
       $penjual->assignRole('penjual');
       
       $customer = User::create([
-        'name' => 'customer01',
-        'email' => 'customer01@gmail.com',
+        'name' => 'customerafif01',
+        'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
+        'image' => 'default.png',
+        'email' => 'customerafif01@gmail.com',
         'email_verified_at' => now(),
         'password' => bcrypt('customer01'),
         'remember_token' => \Str::random(60),
