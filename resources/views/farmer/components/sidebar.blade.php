@@ -15,7 +15,7 @@
         <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">Master Data</p>
         <a href="{{url('back-farmer/material')}}" class="mb-3 @if (Request::segment(2) == 'material') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
-            &nbsp;Material
+            &nbsp;Bahan Baku
         </a>
         
         <a href="{{url('back-farmer/monitor-product')}}" class="mb-3 @if (Request::segment(2) == 'monitor-produk') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">

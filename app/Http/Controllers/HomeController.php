@@ -16,9 +16,9 @@ class HomeController extends Controller
         $roleUser = \Auth::user()->roles->pluck('name')[0];
         if ($roleUser == 'admin') {
             return redirect('/back-admin/dashboard');
-        } elseif ($roleUser == 'petani') {
+        } elseif ($roleUser == 'farmer') {
             return redirect('/back-farmer/dashboard');
-        } elseif ($roleUser == 'penjual') {
+        } elseif ($roleUser == 'seller') {
             return redirect('/back-seller/dashboard');
         } else {
             return redirect('/logout');

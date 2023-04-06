@@ -21,6 +21,9 @@ class UserSeeder extends Seeder
     {
       $admin = User::create([
         'name' => 'adminafif01',
+        'full_name' => 'Afif Rohul Abrori',
+        'no_hp' => '081515018282',
+        'address' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quo.",
         'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
         'image' => 'default.png',
         'email' => 'adminafif01@gmail.com',
@@ -35,6 +38,9 @@ class UserSeeder extends Seeder
       
       $petani = User::create([
         'name' => 'petaniafif01',
+        'full_name' => 'Afif Rohul Abrori',
+        'no_hp' => '081515018282',
+        'address' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quo.",
         'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
         'image' => 'default.png',
         'email' => 'petaniafif01@gmail.com',
@@ -45,10 +51,13 @@ class UserSeeder extends Seeder
         'updated_at' => now()
       ]);
       event(new Registered($petani));
-      $petani->assignRole('petani');
+      $petani->assignRole('farmer');
       
       $penjual = User::create([
         'name' => 'penjualafif01',
+        'full_name' => 'Afif Rohul Abrori',
+        'no_hp' => '081515018282',
+        'address' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quo.",
         'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
         'image' => 'default.png',
         'email' => 'penjualafif01@gmail.com',
@@ -59,10 +68,13 @@ class UserSeeder extends Seeder
         'updated_at' => now()
       ]);
       event(new Registered($penjual));
-      $penjual->assignRole('penjual');
+      $penjual->assignRole('seller');
       
       $customer = User::create([
         'name' => 'customerafif01',
+        'full_name' => 'Afif Rohul Abrori',
+        'no_hp' => '081515018282',
+        'address' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, quo.",
         'description' => 'Lorem ipsum dolor sit amet quam tempor montes si. Magna montes aenean id efficitur fermentum vitae. Dapibus pulvinar hac letius si congue interdum cras lorem. Integer nascetur eros ac commodo sodales vulputate himenaeos ullamcorper porta. Odio nostra placerat accumsan curae sem massa porttitor sit duis fames. Tellus cursus etiam per fames a turpis ante.',
         'image' => 'default.png',
         'email' => 'customerafif01@gmail.com',

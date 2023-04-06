@@ -19,6 +19,7 @@ class CreateMonitoringsTable extends Migration
             $table->foreignId('seller_id');
             $table->enum('read_status', ['read', 'deliver']);
             $table->text('message');
+            $table->text('feedback')->nullable();
             $table->timestamps();
         });
     }

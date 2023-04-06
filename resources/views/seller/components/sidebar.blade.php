@@ -13,7 +13,7 @@
         </a>
 
         <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">Master Data</p>
-        <a href="{{url('back-seller/product')}}" class="mb-3 @if (Request::segment(1) == 'product') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <a href="{{url('back-seller/product')}}" class="mb-3 @if (Request::segment(2) == 'product') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Product
         </a>
