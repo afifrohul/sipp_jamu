@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\SellerDashboardController;
 use App\Http\Controllers\FarmerDashboardController;
+use App\Http\Controllers\FarmerMonitoringController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
 
@@ -38,6 +39,12 @@ Route::post('/back-farmer/material/new', [MaterialController::class, 'store']);
 Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
 Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
 Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
+
+Route::get('/back-farmer/monitor-product', [FarmerMonitoringController::class, 'index']);
+// Route::post('/back-farmer/material/new', [MaterialController::class, 'store']);
+// Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
+// Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
+// Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
 
 Route::get('/back-seller/dashboard', [SellerDashboardController::class, 'index']);
 

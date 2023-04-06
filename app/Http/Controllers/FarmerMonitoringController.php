@@ -2,24 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Material;
 use App\Models\Product;
-class FarmerDashboardController extends Controller
+use Illuminate\Http\Request;
+
+class FarmerMonitoringController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    private $param;
     public function index()
     {
         try {
-            $this->param['getCountMaterial'] = Material::count();
-            $this->param['getCountProduck'] = Product::count();
-            
-            return view('farmer.pages.dashboard.dashboard',$this->param);
+            $this->param['getAllProduct'] = Product::all();
+            return view('farmer.pages.monitor.page-list-monitor-product', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
