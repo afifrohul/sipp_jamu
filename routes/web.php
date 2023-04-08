@@ -21,7 +21,8 @@ use App\Http\Controllers\MaterialController;
 */
 
 Route::get('/', function () {
-    return redirect('/back-login');
+    // return redirect('/back-login');
+    return view('home');
 });
 
 // Route::get('/dashboard', function () {
@@ -62,5 +63,8 @@ Route::group(['middleware' => ['role:seller']], function () {
     Route::delete('/back-seller/product/destroy/{product}', [ProductController::class, 'destroy']);
 });
 
+Route::group(['middleware' => ['role:customer']], function () {
+    Route::get('/back-customer/dashboard', [CustomerDashboardController::class, 'index']);
+});
 
 require __DIR__.'/auth.php';

@@ -7,18 +7,18 @@
         </div>
 
         <p class="uppercase text-xs text-gray-600 mb-4 tracking-wider">Dashboard</p>
-        <a href="{{url('back-farmer/dashboard')}}" class="mb-3 @if (Request::segment(2) == 'dashboard') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <a href="{{url('back-farmer/dashboard')}}" class="mb-3 @if (Request::segment(2) == 'dashboard') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-chart-pie text-xs mr-2"></i>                
             Dashboard
         </a>
 
         <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">Master Data</p>
-        <a href="{{url('back-farmer/material')}}" class="mb-3 @if (Request::segment(2) == 'material') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <a href="{{url('back-farmer/material')}}" class="mb-3 @if (Request::segment(2) == 'material') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Bahan Baku
         </a>
         
-        <a href="{{url('back-farmer/monitor-product')}}" class="mb-3 @if (Request::segment(2) == 'monitor-produk') text-teal-600 @endif capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+        <a href="{{url('back-farmer/monitor-product')}}" class="mb-3 @if (Request::segment(2) == 'monitor-product') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Monitoring Produk
         </a>

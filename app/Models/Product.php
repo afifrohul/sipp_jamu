@@ -20,4 +20,9 @@ class Product extends Model
     {
         return $this->belongsTo(User::class);
     }
+    
+    public function product_galleries()
+    {
+        return $this->belongsTo(ProductGallery::class);
+    }
 }

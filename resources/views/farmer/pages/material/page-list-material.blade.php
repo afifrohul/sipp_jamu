@@ -13,7 +13,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
-                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
+                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -31,7 +31,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Harga(Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="5000" value="{{old('price')}}">
+                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('price')}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Stok (gram):</label>
-                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-teal-500" placeholder="5000" value="{{old('stock')}}">
+                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('stock')}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -51,10 +51,10 @@
                     <div>
                         <label class="text-gray-700 ml-1">Foto: </label>
                         <div class='flex items-center justify-center w-full mt-2'>
-                            <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-teal-500 group'>
+                            <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-yellow-500 group'>
                                 <div class='flex flex-col items-center justify-center pt-7 text-center'>
-                                    <svg class="w-10 h-10 mt-8 text-teal-500 group-hover:text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                                    <p class='text-sm text-gray-400 group-hover:text-teal-600 pt-1 tracking-wider' id="fileName">Pilih Gambar</p>
+                                    <svg class="w-10 h-10 mt-8 text-yellow-500 group-hover:text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    <p class='text-sm text-gray-400 group-hover:text-yellow-600 pt-1 tracking-wider' id="fileName">Pilih Gambar</p>
                                 </div>
                             <input type='file' class="hidden" name="image" id="images" />
                             </label>
@@ -63,7 +63,7 @@
                     <div>
                         <label class="text-gray-700 ml-1">Preview: </label>
                         <div class='flex items-center justify-center w-full mt-2'>
-                            <label class='flex flex-col border-4 border-dashed w-full h-auto border-teal-500 group bg-gray-300'>
+                            <label class='flex flex-col border-4 border-dashed w-full h-auto border-yellow-500 group bg-gray-300'>
                                     <div class='flex flex-col items-center justify-center py-1'>
                                         <img id="preview" src="{{asset('assets/upload/material/default.png')}}" alt="preview" class="object-cover h-32">
                                     </div>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="mt-5">
-                    <button type="submit" class="btn-shadow">Simpan</button>
+                    <button type="submit" onclick="return confirm('Tambahakan data baru ?')" class="btn-shadow">Simpan</button>
                 </div>
             </form>
         </div>
@@ -136,7 +136,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
                                 <form action="{{url('/back-farmer/material/edit',$item->id)}}" method="POST" class="inline">
                                     @csrf
-                                    <button type="submit" class="bg-teal-500 h-10 w-10 rounded hover:bg-teal-600"><i class="fa fa-pencil text-white"></i></button>
+                                    <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
                                 <form action="{{url('/back-farmer/material/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')

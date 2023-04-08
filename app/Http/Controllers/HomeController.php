@@ -20,6 +20,8 @@ class HomeController extends Controller
             return redirect('/back-farmer/dashboard');
         } elseif ($roleUser == 'seller') {
             return redirect('/back-seller/dashboard');
+        } elseif ($roleUser == 'customer') {
+            return redirect('/');
         } else {
             return redirect('/logout');
         }
