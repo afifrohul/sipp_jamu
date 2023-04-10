@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
-        $user->assignRole('customer');
+        $user->assignRole('farmer');
 
         // Auth::login($user);
 

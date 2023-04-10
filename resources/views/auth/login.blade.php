@@ -102,7 +102,7 @@
                                 <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" required="">
                             </div>
                             <div class="flex items-center justify-between">
-                                <a href="#" class="text-sm font-medium text-yellow-600 hover:underline">Forgot password?</a>
+                                <a href="{{ route('password.request') }}" class="text-sm font-medium text-yellow-600 hover:underline">Forgot password?</a>
                             </div>
                             <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                             <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Back to Home</a>
