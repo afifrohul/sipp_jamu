@@ -92,21 +92,10 @@
                       <p class="mt-6 text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laboriosam
                           provident voluptatum id magni iste nobis corrupti, delectus quis repellat, debitis error quod
                           explicabo molestiae rerum totam ab sunt excepturi?</p>
-      
-                      {{-- <button class="flex items-center mt-8 -mx-2 text-yellow-500">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-1" fill="none" viewBox="0 0 24 24"
-                              stroke="currentColor" stroke-width="2">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          <p class="mx-1 font-semibold">PLAY VIDEO</p>
-                      </button> --}}
                   </div>
       
                   <div class="mt-8 lg:w-1/2 lg:px-4 lg:mt-0">
                       <img class="object-cover w-full rounded-xl h-96"
-                          {{-- src="https://images.unsplash.com/photo-1516131206008-dd041a9764fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" --}}
                           src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
                           alt="thumbnail">
                   </div>
@@ -169,156 +158,81 @@
           </section>
       
           <section class="container px-6 py-8 mx-auto lg:py-16">
-              <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl ">Produk unggulan kami</h3>
-      
-              {{-- <div class="flex items-center py-6 mt-4 -mx-2 overflow-x-auto whitespace-nowrap">
-                  <button
-                      class=" inline-flex px-4 mx-2 focus:outline-none  items-center py-0.5 text-white bg-yellow-500 hover:bg-yellow-400 duration-300 transition-colors rounded-2xl">All</button>
-                  <button
-                      class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-yellow-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Web
-                      Design</button>
-                  <button
-                      class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-yellow-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Development</button>
-                  <button
-                      class=" inline-flex px-4 mx-2 duration-300 transition-colors hover:bg-yellow-500/70 hover:text-white text-gray-500 focus:outline-none py-0.5 cursor-pointer rounded-2xl">Research</button>
-              </div> --}}
-      
-              <div class="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-3 ">
-                  <div  class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                          src="https://cdn.dribbble.com/users/1644453/screenshots/17056773/media/00509f74e765da294440886db976943a.png?compress=1&resize=1000x750&vertical=top"
-                          alt="">
-                  </div>
-
-                  <div  class="transition-all duration-500 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96 "
-                          src="https://cdn.dribbble.com/userupload/3233220/file/original-e80767b5947df65a0f1ab4dab4964679.png?compress=1&resize=1024x768"
-                          alt="">
-                  </div>
-
-                  <div  class="transition-all duration-500 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                          src="https://cdn.dribbble.com/users/1644453/screenshots/14748860/media/25f53296059b741ac1c083be9f41745b.png?compress=1&resize=1000x750&vertical=top"
-                          alt="">
-                  </div>
-
-                  <div  class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                          src="https://cdn.dribbble.com/users/878428/screenshots/17307425/media/01782a518148ce7ef2e790473c888b1f.png?compress=1&resize=1000x750&vertical=top"
-                          alt="">
-                  </div>
-
-                  <div  class="transition-all duration-500 lg:col-span-2 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                          src="https://cdn.dribbble.com/users/1930709/screenshots/11466872/media/e50b0f02160a77397eb4a76782d23966.png?compress=1&resize=1000x750&vertical=top"
-                          alt="">
-                  </div>
-
-                  <div  class="transition-all duration-500 hover:scale-105">
-                      <img class="object-cover hover:cursor-pointer object-top w-full rounded-lg shadow-md shadow-gray-200 h-80 xl:h-96"
-                          src="https://cdn.dribbble.com/users/1644453/screenshots/14403641/media/21e305eb9c8255b6e3367f0ca52c6668.png?compress=1&resize=1000x750&vertical=top"
-                          alt="">
-                  </div>
-              </div>
-          </section>
-      
-          <section class="container px-6 py-8 mx-auto lg:py-16">
-              <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl ">Testimonial</h3>
-      
-              <div class="grid grid-cols-1 gap-8 mt-8 md:mt-10 md:grid-cols-2 xl:grid-cols-3">
-                  <div>
-                      <div class="relative">
-                          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                              src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                              alt="">
-      
-                          <div class="absolute bottom-0 flex p-3 bg-white ">
-                              <img class="object-cover object-center w-10 h-10 rounded-full"
-                                  src="https://cdn.dribbble.com/users/1436669/screenshots/15006128/media/5f91264b3b56cc452cb2bba2535bccdd.png?compress=1&resize=1000x750&vertical=top"
-                                  alt="">
-      
-                              {{-- <div class="mx-4">
-                                  <h1 class="text-sm text-gray-700">Tom Hank</h1>
-                                  <p class="text-sm text-gray-500">Creative Director</p>
-                              </div> --}}
-                          </div>
-                      </div>
-      
-                      {{-- <h1 class="mt-6 text-xl font-semibold text-gray-800">What do you want to know about UI
-                      </h1> --}}
-      
-                      <hr class="w-32 my-6 text-yellow-500">
-      
-                      <p class="text-sm text-gray-500">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-                          praesentium, alias nam? Tempore
-                      </p>
-      
-                      {{-- <a href="#" class="inline-block mt-4 text-yellow-500 underline hover:text-yellow-400">Read more</a> --}}
-                  </div>
-      
-                  <div>
-                      <div class="relative">
-                          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                              src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                              alt="">
-      
-                          <div class="absolute bottom-0 flex p-3 bg-white ">
-                              <img class="object-cover object-center w-10 h-10 rounded-full"
-                                  src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                  alt="">
-      
-                              {{-- <div class="mx-4">
-                                  <h1 class="text-sm text-gray-700">arthur melo</h1>
-                                  <p class="text-sm text-gray-500">Creative Director</p>
-                              </div> --}}
-                          </div>
-                      </div>
-      
-                      {{-- <h1 class="mt-6 text-xl font-semibold text-gray-800">All the features you want to know
-                      </h1> --}}
-      
-                      <hr class="w-32 my-6 text-yellow-500">
-      
-                      <p class="text-sm text-gray-500">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-                          praesentium, alias nam? Tempore
-                      </p>
-      
-                      {{-- <a href="#" class="inline-block mt-4 text-yellow-500 underline hover:text-yellow-400">Read more</a> --}}
-                  </div>
-      
-                  <div>
-                      <div class="relative">
-                          <img class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-                              src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-                              alt="">
-      
-                          <div class="absolute bottom-0 flex p-3 bg-white ">
-                              <img class="object-cover object-center w-10 h-10 rounded-full"
-                                  src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                                  alt="">
-      
-                              {{-- <div class="mx-4">
-                                  <h1 class="text-sm text-gray-700">Amelia. Anderson</h1>
-                                  <p class="text-sm text-gray-500">Lead Developer</p>
-                              </div> --}}
-                          </div>
-                      </div>
-      
-                      {{-- <h1 class="mt-6 text-xl font-semibold text-gray-800">Which services you get from Meraki UI</h1> --}}
-      
-                      <hr class="w-32 my-6 text-yellow-500">
-      
-                      <p class="text-sm text-gray-500">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores
-                          praesentium, alias nam? Tempore
-                      </p>
-      
-                      {{-- <a href="#" class="inline-block mt-4 text-yellow-500 underline hover:text-yellow-400">Read more</a> --}}
-                  </div>
-              </div>
-          </section>
+              <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3>
+              <div class="grid grid-cols-3 gap-4 mt-6">
+                  <a href="">
+                    <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
+                        <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                        <div class="px-2 py-4">
+                        <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                        <p class="text-gray-700 text-xs lg:text-sm">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                        </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
+                        <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                        <div class="px-2 py-4">
+                            <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                            <p class="text-gray-700 text-xs lg:text-sm">
+                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
+                        <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                        <div class="px-2 py-4">
+                            <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                            <p class="text-gray-700 text-xs lg:text-sm">
+                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <h3 class="mt-6 text-end">
+                <a href="{{ url('/product') }}" class="inline-block font-semibold mr-10 text-lg text-gray-400 hover:translate-x-7 hover:italic duration-300">Lihat Semua Produk <svg xmlns="http://www.w3.org/2000/svg" class="w-4 inline" fill="#9ca3af" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg></a>
+            </h3>
+        </section>
+          
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Testimonial</h3>
+                <div class="flex flex-wrap mt-10 ">
+                    <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div class="h-full text-center">
+                        <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
+                        <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
+                        <p class="text-gray-500">Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                        <div class="h-full text-center">
+                        <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
+                        <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
+                        <p class="text-gray-500">Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 lg:mb-0 p-4">
+                        <div class="h-full text-center">
+                        <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
+                        <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                        <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
+                        <p class="text-gray-500">Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       </main>
       
       <footer class="flex flex-col items-center py-20 text-white bg-gray-900">

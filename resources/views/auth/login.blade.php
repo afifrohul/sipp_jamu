@@ -105,6 +105,7 @@
                                 <a href="#" class="text-sm font-medium text-yellow-600 hover:underline">Forgot password?</a>
                             </div>
                             <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
+                            <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Back to Home</a>
                             <p class="text-sm font-light text-gray-500">
                                 Don’t have an account yet? <a href="{{ url('/register') }}" class="font-medium text-yellow-600 hover:underline ">Register</a>
                             </p>

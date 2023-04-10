@@ -20,7 +20,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <section class="bg-gray-50 p-4 ">
+        <section class="bg-gray-50 p-12 ">
             <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
                     {{-- <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo"> --}}
@@ -40,35 +40,35 @@
                             </div>
                             
                             <!-- Name -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="name" :value="__('Username')" />
 
                                 <x-input id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="text" name="name" :value="old('name')" required autofocus placeholder="Lorem Ipsum" />
                             </div>
                             
                             <!-- No HP -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="no_hp" :value="__('No HP')" />
 
                                 <x-input id="no_hp" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="text" name="no_hp" :value="old('no_hp')" required autofocus placeholder="0812......" />
                             </div>
                             
                             <!-- Alamat -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="address" :value="__('Alamat')" />
 
                                 <x-input id="address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="text" name="address" :value="old('address')" required autofocus placeholder="Lorem Ipsum" />
                             </div>
 
                             <!-- Email Address -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="email" :value="__('Email')" />
 
                                 <x-input id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="email" name="email" :value="old('email')" placeholder="name@gmail.com" required />
                             </div>
 
                             <!-- Password -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password" :value="__('Password')" />
 
                                 <x-input id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
@@ -78,7 +78,7 @@
                             </div>
 
                             <!-- Confirm Password -->
-                            <div class="mt-2">
+                            <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password_confirmation" :value="__('Confirm Password')" />
 
                                 <x-input id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
@@ -95,6 +95,7 @@
                             </div> --}}
                             <br>
                             <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Register</button>
+                            <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Back to Home</a>
                             <p class="text-sm font-light text-gray-500">
                                 Already registered? <a href="{{ url('/back-login') }}" class="font-medium text-yellow-600 hover:underline ">Sign in</a>
                             </p>

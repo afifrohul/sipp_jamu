@@ -15,6 +15,9 @@ class CreateMaterialGalleriesTable extends Migration
     {
         Schema::create('material_galleries', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('material_id');
+            $table->string('caption');
+            $table->text('image');
             $table->timestamps();
         });
     }
