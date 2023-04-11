@@ -76,8 +76,9 @@
                 <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
                     <div class="py-4 px-6 space-y-2 md:space-y-2">
                         <h1 class="text-lg font-bold leading-tight tracking-tight text-gray-900 ">
-                            Register your account
+                            Reset Password
                         </h1>
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <form class="space-y-2 md:space-y-2"method="POST" action="{{ route('password.update') }}">
                             @csrf
                             <!-- Password Reset Token -->

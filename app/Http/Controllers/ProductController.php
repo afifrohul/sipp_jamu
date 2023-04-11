@@ -152,9 +152,7 @@ class ProductController extends Controller
             if ($request->file('image')) {
                 $request->file('image')->move('assets/upload/product', $date.$random.$request->file('image')->getClientOriginalName());
                 $product->image = $date.$random.$request->file('image')->getClientOriginalName();
-            } else {
-                $product->image = "default.png";
-            }
+            } 
             $product->save();
 
             return redirect('/back-seller/product')->withStatus('Berhasil mengubah data.');

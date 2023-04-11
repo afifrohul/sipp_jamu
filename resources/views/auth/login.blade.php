@@ -91,6 +91,11 @@
                         <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                             Sign in to your account
                         </h1>
+                        <!-- Session Status -->
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+                        <!-- Validation Errors -->
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <form class="space-y-4 md:space-y-6" method="POST" action="{{ route('login') }}">
                             @csrf
                             <div>

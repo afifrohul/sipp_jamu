@@ -1,7 +1,7 @@
 <div class="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-6 border-b border-gray-300">
     <div class="flex-none w-56 flex flex-row items-center">
         <img src="{{asset('assets/logos/Logo HMIF Compress.png')}}" class="h-10 flex-none">
-        <strong class="capitalize ml-5 flex-1">Seller</strong>
+        <strong class="capitalize ml-5 flex-1">My Dashboard</strong>
         <button id="sliderBtn" class="flex-none text-right text-gray-900 hidden md:block">
             <i class="fad fa-list-ul"></i>
         </button>

@@ -152,9 +152,7 @@ class MaterialController extends Controller
             if ($request->file('image')) {
                 $request->file('image')->move('assets/upload/material', $date.$random.$request->file('image')->getClientOriginalName());
                 $material->image = $date.$random.$request->file('image')->getClientOriginalName();
-            } else {
-                $material->image = "default.png";
-            }
+            } 
             $material->save();
 
             return redirect('/back-farmer/material')->withStatus('Berhasil mengubah data.');
