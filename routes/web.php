@@ -25,6 +25,16 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/product', function () {
+    // return redirect('/back-login');
+    return view('product');
+});
+
+Route::get('/product-detail', function () {
+    // return redirect('/back-login');
+    return view('product-detail');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');

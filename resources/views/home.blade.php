@@ -160,7 +160,7 @@
           <section class="container px-6 py-8 mx-auto lg:py-16">
               <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3>
               <div class="grid grid-cols-3 gap-4 mt-6">
-                  <a href="">
+                <a href="{{ url('/product-detail') }}">
                     <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                         <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                         <div class="px-2 py-4">
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ url('/product-detail') }}">
                     <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                         <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                         <div class="px-2 py-4">
@@ -182,7 +182,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ url('/product-detail') }}">
                     <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                         <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                         <div class="px-2 py-4">
