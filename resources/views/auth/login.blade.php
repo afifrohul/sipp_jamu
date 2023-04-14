@@ -19,7 +19,7 @@
             <div>
                 <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required='' oninvalid="this.setCustomValidity('Please Enter valid email')"tofocus />
             </div>
 
             <!-- Password -->
@@ -29,7 +29,7 @@
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
-                                required autocomplete="current-password" />
+                                required='' oninvalid="this.setCustomValidity('Please Enter valid email')"tocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -88,8 +88,11 @@
                 </a>
                 <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
+                        {{-- <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                             Sign in to your account
+                        </h1> --}}
+                        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
+                            Masuk ke Akun Anda
                         </h1>
                         <!-- Session Status -->
                         <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -100,19 +103,23 @@
                             @csrf
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="name@gmail.com" required="">
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="nama@gmail.com" oninvalid="this.setCustomValidity('Silahkan isi kolom ini dengan email yang valid.')" >
                             </div>
                             <div>
+                                {{-- <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label> --}}
                                 <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" required="">
+                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" oninvalid="this.setCustomValidity('Silahkan isi kolom ini')">
                             </div>
                             <div class="flex items-center justify-between">
-                                <a href="{{ route('password.request') }}" class="text-sm font-medium text-yellow-600 hover:underline">Forgot password?</a>
+                                {{-- <a href="{{ route('password.request') }}" class="text-sm font-medium text-yellow-600 hover:underline">Forgot password?</a> --}}
+                                <a href="{{ route('password.request') }}" class="text-sm font-medium text-yellow-600 hover:underline">Lupa Password?</a>
                             </div>
-                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
-                            <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Back to Home</a>
+                            {{-- <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button> --}}
+                            <button type="submit" id="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Masuk</button>
+                            <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Kembali ke halaman utama</a>
                             <p class="text-sm font-light text-gray-500">
-                                Don’t have an account yet? <a href="{{ url('/register') }}" class="font-medium text-yellow-600 hover:underline ">Register</a>
+                                Belum memiliki akun? <a href="{{ url('/register') }}" class="font-medium text-yellow-600 hover:underline ">Daftar Akun</a>
+                                {{-- Don’t have an account yet? <a href="{{ url('/register') }}" class="font-medium text-yellow-600 hover:underline ">Register</a> --}}
                             </p>
                         </form>
                     </div>

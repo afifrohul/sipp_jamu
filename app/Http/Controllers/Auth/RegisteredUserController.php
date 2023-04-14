@@ -42,6 +42,18 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ],
+        [
+            'numeric' => ':attribute harus berupa nomor',
+            'required' => ':attribute harus diisi.',
+            'confirmed' => 'Konfirmasi :attribute tidak sama.'
+        ],
+        [
+            'full_name' => 'Nama Lengkap',
+            'no_hp' => 'No Hp',
+            'address' => 'Alamat',
+            'name' => 'Nama Pengguna',
+
         ]);
 
         $user = User::create([
@@ -58,6 +70,7 @@ class RegisteredUserController extends Controller
 
         // Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        // return redirect(RouteServiceProvider::HOME)->withStatus('Daftar Akun Berhasil!');
+        return redirect('/back-login')->withStatus('Daftar Akun Berhasil!');
     }
 }

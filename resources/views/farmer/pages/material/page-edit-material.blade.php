@@ -69,8 +69,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 flex gap-4">
                     <button type="submit" onclick="return confirm('Simpan pembaruan data ?')"class="btn-shadow">Simpan</button>
+                    <button class="btn-shadow-cancel"><a href="{{ url('/back-farmer/material') }}"> Batal</a></button>
                 </div>
             </form>
         </div>

@@ -13,13 +13,13 @@ return [
     |
     */
 
-    'reset' => 'Your password has been reset!',
-    // 'reset' => 'Password telah berhasil direset!',
-    'sent' => 'We have emailed your password reset link!',
-    // 'sent' => 'Kami telah mengirimkan link reset password ke email Anda!',
+    // 'reset' => 'Your password has been reset!',
+    'reset' => 'Password telah berhasil disetel ulang!',
+    // 'sent' => 'We have emailed your password reset link!',
+    'sent' => 'Kami telah mengirimkan tautan setel ulang kata sandi ke email Anda!',
     'throttled' => 'Please wait before retrying.',
     'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that email address.",
-    // 'user' => "Kami tidak dapat menemukan pengguna dengan alamat email tersebut.",
+    // 'user' => "We can't find a user with that email address.",
+    'user' => "Kami tidak dapat menemukan pengguna dengan alamat email tersebut.",
 
 ];

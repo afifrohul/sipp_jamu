@@ -9,6 +9,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>
@@ -50,13 +51,89 @@
             </a>
             <nav class="md:ml-auto flex gap-1 flex-wrap items-center text-base justify-center">
             <a href="{{ url('/') }}" class="md:mr-5 hover:text-gray-900 font-semibold">Home</a>
-            <a href="{{ url('/product') }}" class="md:mr-5 hover:text-gray-900 font-semibold">Product</a>
+            <a href="{{ url('/product') }}" class="md:mr-5 hover:text-gray-900 font-semibold">Produk</a>
             </nav>
-            <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="{{ url('/back-login') }}">LOGIN</a>
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-            </button>
+            @auth
+                {{-- <div class="flex flex-row-reverse items-center">
+                    <div class="dropdown relative md:static">
+                        <button class="menu-btn focus:outline-none flex flex-wrap items-center">
+                            <div class="w-8 h-8 overflow-hidden rounded-full">
+                                <img class="w-full h-full object-cover" src="{{asset('assets/img-admin/avatar-log.jpg')}}" >
+                            </div> 
+
+                            <div class="ml-2 capitalize flex ">
+                                <h1 class="text-sm text-gray-800 font-semibold m-0 p-0 leading-none">Halo, {{Auth::user()->name;}}</h1>
+                                <i class="fad fa-chevron-down ml-2 text-xs leading-none"></i>
+                            </div>                        
+                        </button>
+                        <button class="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
+                        <div class="text-gray-500 menu hidden md:mt-10 md:w-full rounded bg-white shadow-md absolute z-20 right-0 w-40 mt-5 py-2 animated faster">
+                            <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                                <i class="fad fa-user-edit text-xs mr-1"></i> 
+                                edit my profile
+                            </a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="w-full text-left px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
+                                    <i class="fad fa-user-times text-xs mr-1"></i> 
+                                    log out
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div> --}}
+                {{-- <div class="flex gap-2">
+                    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="{{ url('/back-dashboard') }}">DASHBOARD</a>
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                    </button>
+                </div> --}}
+                <x-dropdown align="right" width="48">
+                    <x-slot name="trigger">
+                        <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                            <div>{{ Auth::user()->name }}</div>
+
+                            <div class="ml-1">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content">
+                        <!-- Authentication -->
+                        <x-dropdown-link href="{{ url('/back-dashboard') }}">
+                            Dashboard
+                        </x-dropdown-link>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-dropdown-link>
+                        </form>
+                    </x-slot>
+                </x-dropdown>
+            @endauth
+            @guest
+                
+            <div class="flex gap-2">
+                <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="{{ url('/back-login') }}">MASUK</a>
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </button>
+                <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="{{ url('/register') }}">DAFTAR</a>
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                </button>
+            </div>
+            @endguest
         </div>
     </header>
       

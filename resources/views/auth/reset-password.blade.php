@@ -76,7 +76,7 @@
                 <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
                     <div class="py-4 px-6 space-y-2 md:space-y-2">
                         <h1 class="text-lg font-bold leading-tight tracking-tight text-gray-900 ">
-                            Reset Password
+                            Setel ulang password
                         </h1>
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <form class="space-y-2 md:space-y-2"method="POST" action="{{ route('password.update') }}">
@@ -102,14 +102,14 @@
 
                             <!-- Confirm Password -->
                             <div class="">
-                                <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password_confirmation" :value="__('Confirm Password')" />
+                                <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password_confirmation" :value="__('Konfirmasi Password')" />
 
                                 <x-input id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
                                                 type="password"
                                                 name="password_confirmation" required placeholder="••••••••"/>
                             </div>
                             <br>
-                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Reset Password</button>
+                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Setel Ulang password</button>
                         </form>
                     </div>
                 </div>
