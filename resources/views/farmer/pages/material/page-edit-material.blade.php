@@ -6,7 +6,7 @@
             <h1 class="h6">Edit Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data">
+            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data" novalidate>
                 @method('PUT')
                 @csrf
                 <div>

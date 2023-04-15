@@ -9,7 +9,7 @@
             <h1 class="h6">Tambah Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-farmer/material/new')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{url('/back-farmer/material/new')}}" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>

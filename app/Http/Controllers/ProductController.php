@@ -51,7 +51,7 @@ class ProductController extends Controller
             'stock' => 'required',
         ],
         [
-            'required' => ':attribute harus diisi.',
+            'required' => 'Tolong isi kolom ini. Data harus diisi lengkap!',
         ],
         [
             'name' => 'Nama',
@@ -131,7 +131,7 @@ class ProductController extends Controller
             'stock' => 'required',
         ],
         [
-            'required' => ':attribute harus diisi.',
+            'required' => 'Tolong isi kolom ini. Data harus diisi lengkap!',
         ],
         [
             'name' => 'Nama',

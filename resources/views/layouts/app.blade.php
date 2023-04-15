@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -33,4 +33,32 @@
             </main>
         </div>
     </body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
+
+  <!-- Scripts -->
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>SIPP JAMU</title>
+</head>
+<body>
+  <div>
+    @include('components.header')
+      @yield('content')
+    @include('components.footer')
+  </div>
+</body>
 </html>
+
