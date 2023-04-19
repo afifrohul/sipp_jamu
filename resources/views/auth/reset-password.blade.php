@@ -79,7 +79,7 @@
                             Setel ulang password
                         </h1>
                         <x-auth-validation-errors class="mb-4" :errors="$errors" />
-                        <form class="space-y-2 md:space-y-2"method="POST" action="{{ route('password.update') }}">
+                        <form class="space-y-2 md:space-y-2"method="POST" action="{{ route('password.update') }}" novalidate>
                             @csrf
                             <!-- Password Reset Token -->
                             <input type="hidden" name="token" value="{{ $request->route('token') }}">

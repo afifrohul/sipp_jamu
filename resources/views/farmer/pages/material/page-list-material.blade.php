@@ -6,13 +6,13 @@
 <div>
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">Tambah Bahan Baku</h1>
+            <h1 class="h6">Tambah Katalog Produk</h1>
         </div>
         <div class="card-body">
             <form method="POST" action="{{url('/back-farmer/material/new')}}" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div>
-                    <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
+                    <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
                     <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -21,7 +21,7 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
+                    <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
                     <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -72,14 +72,14 @@
                     </div>
                 </div>
                 <div class="mt-5">
-                    <button type="submit" onclick="return confirm('Tambahakan data baru ?')" class="btn-shadow">Simpan</button>
+                    <button type="submit" onclick="return confirm('Apakah ingin menambahkan data ini ?')" class="btn-shadow">Simpan</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="card">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">List Bahan Baku</h1>
+            <h1 class="h6">List Katalog Produk</h1>
         </div>
         <div class="card-body">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
@@ -90,10 +90,10 @@
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Bahan Baku
+                                Nama Katalog Produk
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Deskripsi Bahan Baku
+                                Deskripsi Katalog Produk
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Harga (per gram)
