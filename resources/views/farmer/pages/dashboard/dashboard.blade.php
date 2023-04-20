@@ -9,9 +9,9 @@
                         <div class="h6 text-indigo-700 fad fa-users"></div>
                     </div>
                     <div class="mt-8">
-                        <h1 class="h5"> {{ $getCountMaterial }} Bahan Baku</h1>
-                        <p>Total Bahan Baku</p>
-                    </div>            
+                            <h1 class="h5"> {{ $getCountMaterial }} Katalog Petani</h1>
+                            <p>Total katalog produk petani</p>
+                        </div>            
                 </div>
             </div>
             <div class="footer {{-- @if ($getCountFeedbackUnread != 0) bg-teal-500 @else bg-white @endif --}} p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>

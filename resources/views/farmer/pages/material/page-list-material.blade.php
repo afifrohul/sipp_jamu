@@ -13,7 +13,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
-                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
+                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." value="{{old('description')}}">
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -138,11 +138,11 @@
                                     @csrf
                                     <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
-                                <form action="{{url('/back-farmer/material/destroy',$item->id)}}" method="POST" class="inline">
+                                {{-- <form action="{{url('/back-farmer/material/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>
-                                </form>
+                                </form> --}}
                             </td>
                         </tr>
                         @endforeach
