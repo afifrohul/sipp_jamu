@@ -12,6 +12,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -109,5 +111,6 @@
                 </div>
             </div>
         </section>
+        <script src="{{asset('assets/js-admin/scripts.js')}}"></script>
     </body>
 </html>

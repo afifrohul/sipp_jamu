@@ -74,7 +74,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
         <script src="https://cdn.tailwindcss.com"></script>
@@ -103,7 +104,7 @@
                             @csrf
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="nama@gmail.com" oninvalid="this.setCustomValidity('Silahkan isi kolom ini dengan email yang valid.')" >
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="alamatemail@gmail.com" oninvalid="this.setCustomValidity('Silahkan isi kolom ini dengan email yang valid.')" >
                             </div>
                             <div>
                                 {{-- <label for="password" class="block mb-2 text-sm font-medium text-gray-900 ">Password</label> --}}
@@ -126,6 +127,7 @@
                 </div>
             </div>
         </section>
+        <script src="{{asset('assets/js-admin/scripts.js')}}"></script>
     </body>
 </html>
 

@@ -28,7 +28,7 @@
               <x-slot name="content">
                   <!-- Authentication -->
                   <x-dropdown-link href="{{ url('/') }}">
-                      Home
+                      Halaman Utama
                   </x-dropdown-link>
                   <x-dropdown-link href="{{ url('/product') }}">
                       Produk

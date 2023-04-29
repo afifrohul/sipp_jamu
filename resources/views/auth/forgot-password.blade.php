@@ -50,6 +50,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -67,27 +69,28 @@
                         {{-- <p class="text-base leading-tight tracking-tight text-gray-900 italic ">
                             Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.
                         </p> --}}
+                        <!-- Session Status -->
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
+                        <!-- Validation Errors -->
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
                         <p class="text-base leading-tight tracking-tight text-gray-900 italic ">
                             Lupa password Anda? Tidak masalah. Beri tahu kami alamat email Anda dan kami akan mengirimi Anda tautan setel ulang password melalui email yang memungkinkan Anda memilih yang baru.
                         </p>
-                        <!-- Session Status -->
-                        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-                        <!-- Validation Errors -->
-                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                        
                         <form class="space-y-4 md:space-y-6" method="POST" action="{{ route('password.email') }}" novalidate>
                             @csrf
                             <div>
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="nama@gmail.com" required="">
+                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" placeholder="alamatemail@gmail.com" required="">
                             </div>
-                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Kirim Tautan untuk setel ulang password via email</button>
+                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Kirim tautan untuk setel ulang password via email</button>
                             <a href="{{ url('/') }}" class="w-full block text-black bg-gray-200 hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Kembali ke halaman utama</a>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+        <script src="{{asset('assets/js-admin/scripts.js')}}"></script>
     </body>
 </html>
 

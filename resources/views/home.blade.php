@@ -29,9 +29,7 @@
             <div class="lg:w-1/2 lg:px-4">
                 <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl">Kami menyediakan berbagai pilihan jamu yang berkhasiat. Tentunya terbuat dari bahan berkuliatas dan 100% alami.</h3>
 
-                <p class="mt-6 text-gray-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laboriosam
-                    provident voluptatum id magni iste nobis corrupti, delectus quis repellat, debitis error quod
-                    explicabo molestiae rerum totam ab sunt excepturi?</p>
+                <p class="mt-6 text-gray-500 ">Jamu tidak hanya berfungsi sebagai obat, tetapi juga untuk menjaga kebugaran tubuh dan mencegah dari penyakit. Jamu juga biasa digunakan untuk membantu meningkatkan nafsu makan bagi anak-anak. Jamu dapat disebut obat rumahan karena biasanya dibuat sendiri di rumah dari bahan-bahan yang ada di sekitar, yaitu kunyit, kencur, jahe, lengkuas, dan jenis rimpang atau tanaman lainnya. Jamu di Indonesia bukan sekadar ramuan tradisional yang berkhasiat. Akan tetapi, orang-orang terdahulu memiliki upaya untuk tetap menjaga kelestarian alam. Jamu yang memanfaatkan bahan-bahan alam akan mendorong upaya menanam kembali tanaman-tanaman yang digunakan sebagai bahan.</p>
             </div>
 
             <div class="mt-8 lg:w-1/2 lg:px-4 lg:mt-0">
@@ -104,9 +102,9 @@
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                 <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                 <div class="px-2 py-4">
-                <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                <div class="font-bold text-sm lg:text-base mb-2">Jamu Sinom</div>
                 <p class="text-gray-700 text-xs lg:text-sm">
-                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                    Jamu sinom terbuat dari asam jawa yang dipadu dengan kunyit, gula merah, temulawak dan rempah lainnya.
                 </p>
                 </div>
             </div>
@@ -115,9 +113,9 @@
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                 <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                 <div class="px-2 py-4">
-                    <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                    <div class="font-bold text-sm lg:text-base mb-2">Jamu Beras Kencur</div>
                     <p class="text-gray-700 text-xs lg:text-sm">
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                        Jamu beras kencur terbuat dari beras dan rimpang kencur.
                     </p>
                 </div>
             </div>
@@ -126,9 +124,9 @@
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
                 <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
                 <div class="px-2 py-4">
-                    <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
+                    <div class="font-bold text-sm lg:text-base mb-2">Jamu Temulawak</div>
                     <p class="text-gray-700 text-xs lg:text-sm">
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                        Jamu terbuat dari temulawak yang dihaluskan dan ditambahkan dengan asam jawa, gula aren, daun pandan, dan jinten.
                     </p>
                 </div>
             </div>
@@ -141,33 +139,30 @@
     
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
-        <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Testimonial</h3>
+        <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Ulasan dan Rating</h3>
         <div class="flex flex-wrap mt-10 ">
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
-                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <p class="leading-relaxed">Rasanya enak banget,,anak saya sampai nambah terus,,meningkatkan nafsu makan,,setelah mengkonsumsi jamu beras kencur ini bb anak saya cepat bertambah,,terima kasih seller .</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-                <p class="text-gray-500">Lorem, ipsum dolor.</p>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">sri rahayu (jamu beras kencur 5/5)</h2>
                 </div>
             </div>
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
-                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <p class="leading-relaxed">Beli lagi karena rasanya enak dan menyegarkan. Seller beneran gercep dan pengemasan produk sangat rapi. Pengiriman juga cepat. Pokoknya recommended banget.</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
-                <p class="text-gray-500">Lorem, ipsum.</p>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Tina Putri (Jamu sinom 5/5)</h2>
                 </div>
             </div>
             <div class="lg:w-1/3 lg:mb-0 p-4">
                 <div class="h-full text-center">
                 <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
-                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <p class="leading-relaxed">Terimakasih kak..sudah sampai paketnya..nyoba ikhtiar dengan jamu tradisional buat nyembuhin penyakit liver bapak saya..semoga cocok..kalo cocok insyaAllah repeat order lagi</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
-                <p class="text-gray-500">Lorem, ipsum.</p>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Ibrahim (Jamu temulawak 4/5)</h2>
                 </div>
             </div>
         </div>
