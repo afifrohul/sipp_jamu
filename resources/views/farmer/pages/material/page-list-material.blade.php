@@ -134,7 +134,7 @@
                             </td>
                             
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
-                                <form action="{{url('/back-farmer/material/edit',$item->id)}}" method="POST" class="inline">
+                                <form action="{{url('/back-farmer/material/edit',$item->id)}}" method="GET" class="inline">
                                     @csrf
                                     <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>

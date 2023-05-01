@@ -55,7 +55,8 @@ Route::group(['middleware' => ['role:farmer']], function () {
 
     Route::get('/back-farmer/material', [MaterialController::class, 'index']);
     Route::post('/back-farmer/material/new', [MaterialController::class, 'store']);
-    Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
+    // Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
+    Route::get('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
     Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
     Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
 

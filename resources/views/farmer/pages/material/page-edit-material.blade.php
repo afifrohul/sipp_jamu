@@ -6,12 +6,12 @@
             <h1 class="h6">Edit Katalog Produk</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data" novalidate>
-                @method('PUT')
+            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div>
                     <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{$getDetailMaterial->name}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{old('name', $getDetailMaterial->name)}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
-                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." >{{ $getDetailMaterial->description }}</textarea>
+                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." >{{ old('description',$getDetailMaterial->description)  }}</textarea>
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Harga(Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->price}}">
+                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('price', $getDetailMaterial->price)}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Stok (gram): </label>
-                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->stock}}">
+                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('stock', $getDetailMaterial->stock)}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
