@@ -63,7 +63,7 @@
                         <div class='flex items-center justify-center w-full mt-2'>
                             <label class='flex flex-col border-4 border-dashed w-full h-auto border-yellow-500 group bg-gray-300'>
                                     <div class='flex flex-col items-center justify-center py-1'>
-                                        <img id="preview" src="{{asset('assets/upload/material')}}/{{$getDetailMaterial->image}}" alt="preview" class="object-cover h-32">
+                                        <img id="preview" src="{{asset('assets/upload/material')}}/{{$getDetailMaterial->image}}" alt="preview" class="object-cover h-32 opacity-50">
                                     </div>
                             </label>
                         </div>

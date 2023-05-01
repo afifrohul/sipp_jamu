@@ -15,7 +15,8 @@
         {{-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg> --}}
-        <span class=" text-xl">SIPP JAMU</span>
+        {{-- <span class=" text-xl">SIPP JAMU</span> --}}
+        <img src="{{ asset('assets/img-admin/logo.png') }}" alt="logo" class="h-10">
       </a>
       <p class="mt-2 text-sm text-gray-500">merupkan sebuah startup rintisan yang fokus pada pengembangan dan pemasaran produk jamu secara modern.</p>
     </div>
@@ -57,10 +58,10 @@
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">AKSES</h2>
         <nav class="list-none mb-10">
           <li>
-            <a href="" class="text-gray-600 hover:text-gray-800">Masuk ke akun Anda</a>
+            <a href="{{ url('/back-login') }}" class="text-gray-600 hover:text-gray-800">Masuk ke akun Anda</a>
           </li>
           <li>
-            <a href="" class="text-gray-600 hover:text-gray-800">Daftarkan akun Anda </a>
+            <a href="{{ url('/register') }}" class="text-gray-600 hover:text-gray-800">Daftarkan akun Anda </a>
           </li>
         </nav>
       </div>

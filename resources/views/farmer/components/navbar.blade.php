@@ -1,7 +1,8 @@
 <div class="md:fixed md:w-full md:top-0 md:z-20 flex flex-row flex-wrap items-center bg-white p-6 border-b border-gray-300">
     <div class="flex-none w-56 flex flex-row items-center">
-        <img src="{{asset('assets/logos/Logo HMIF Compress.png')}}" class="h-10 flex-none">
-        <strong class="capitalize ml-5 flex-1">My Dashboard</strong>
+        {{-- <img src="{{asset('assets/logos/Logo HMIF Compress.png')}}" class="h-10 flex-none"> --}}
+        <img src="{{ asset('assets/img-admin/logo.png') }}" alt="logo" class="h-10">
+        {{-- <strong class="capitalize ml-5 flex-1 ">My Dashboard</strong> --}}
         <button id="sliderBtn" class="flex-none text-right text-gray-900 hidden md:block">
             <i class="fad fa-list-ul"></i>
         </button>
@@ -27,7 +28,7 @@
                 <button class="hidden fixed top-0 left-0 z-10 w-full h-full menu-overflow"></button>
                 <div class="text-gray-500 menu hidden md:mt-10 md:w-full rounded bg-white shadow-md absolute z-20 right-0 w-40 mt-5 py-2 animated faster">
                     <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="/">
-                        <i class="fad fa-user-edit text-xs mr-1"></i> 
+                        <i class="fad fa-home text-xs mr-1"></i> 
                         Halaman Utama
                     </a>
                     @if ((Auth::user()->roles->pluck('name')[0]) == 'customer')
