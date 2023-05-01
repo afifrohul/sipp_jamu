@@ -23,7 +23,7 @@
                         <div class="h6 text-indigo-700 fad fa-users"></div>
                     </div>
                     <div class="mt-8">
-                        <h1 class="h5"> {{ $getCountProduck }} Produk</h1>
+                        <h1 class="h5"> {{ $getCountProduct }} Produk</h1>
                         <p>Total Produk Seller</p>
                     </div>            
                 </div>

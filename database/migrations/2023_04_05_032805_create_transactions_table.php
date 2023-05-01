@@ -15,12 +15,13 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('customer_id');
-            $table->foreignId('product_id');
+            $table->foreignId('user_id');
+            $table->foreignId('product_id')->nullable();
+            $table->foreignId('material_id')->nullable();
             $table->integer('qty');
             $table->bigInteger('total_price');
-            $table->enum('status_accept', ['accept', 'decline', 'pending']);
-            $table->text('prove_payment');
+            $table->enum('status_accept', ['accept', 'decline', 'pending', 'paid']);
+            $table->text('prove_payment')->nullable();
             $table->timestamps();
         });
     }

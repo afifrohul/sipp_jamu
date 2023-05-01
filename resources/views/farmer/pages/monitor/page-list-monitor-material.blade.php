@@ -6,7 +6,7 @@
 <div>
     <div class="card">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">List Produk Seller</h1>
+            <h1 class="h6">List Bahan Baku Seller</h1>
         </div>
         <div class="card-body">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
@@ -20,13 +20,10 @@
                                 Nama Seller
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Produk
+                                Nama Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Deskripsi Produk
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Harga
+                                Deskripsi Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Stok Tersedia
@@ -40,22 +37,19 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach ($getAllProduct as $item)
+                        @foreach ($getAllMaterialSeller as $item)
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$loop->iteration}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{ $item->seller->name }}</div>
+                                <div class="text-sm text-gray-900">{{ $item->user->name }}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$item->name}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{!! Str::limit($item->description, 40)!!}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{$item->price}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$item->stock}}</div>

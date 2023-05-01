@@ -11,8 +11,16 @@ class Transaction extends Model
     protected $table = 'transactions';
     protected $primaryKey = 'id';
 
-    public function customer()
+    public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+    public function material()
+    {
+        return $this->belongsTo(Material::class);
     }
 }

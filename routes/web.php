@@ -2,12 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminDashboardController;
-use App\Http\Controllers\SellerDashboardController;
-use App\Http\Controllers\FarmerDashboardController;
-use App\Http\Controllers\FarmerMonitoringController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\FarmerHistoryController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\SellerMaterialController;
+use App\Http\Controllers\FarmerDashboardController;
+use App\Http\Controllers\SellerDashboardController;
+use App\Http\Controllers\FarmerMonitoringController;
+use App\Http\Controllers\CustomerDashboardController;
+use App\Http\Controllers\FarmerTransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,11 +59,21 @@ Route::group(['middleware' => ['role:farmer']], function () {
     Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
     Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
 
-    Route::get('/back-farmer/monitor-product', [FarmerMonitoringController::class, 'index']);
+    Route::get('/back-farmer/monitor-product', [FarmerMonitoringController::class, 'monitor_product']);
+    Route::get('/back-farmer/monitor-material', [FarmerMonitoringController::class, 'monitor_material']);
     // Route::post('/back-farmer/material/new', [MaterialController::class, 'store']);
     // Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
     // Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
     // Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
+    
+    Route::get('/back-farmer/history-transaction', [FarmerHistoryController::class, 'index']);
+    Route::get('/back-farmer/transaction', [FarmerTransactionController::class, 'index']);
+    // Route::post('/back-farmer/transaction/new', [FarmerTransactionController::class, 'store']);
+    Route::post('/back-farmer/transaction/edit/{transaction}', [FarmerTransactionController::class, 'edit']);
+    Route::put('/back-farmer/transaction/update/{transaction}', [FarmerTransactionController::class, 'update']);
+    // Route::post('/back-farmer/transaction/update/{transaction}', [FarmerTransactionController::class, 'update']);
+    // Route::delete('/back-farmer/transaction/destroy/{transaction}', [FarmerTransactionController::class, 'destroy']);
+    
 });
 
 Route::group(['middleware' => ['role:seller']], function () {
@@ -71,6 +85,12 @@ Route::group(['middleware' => ['role:seller']], function () {
     Route::post('/back-seller/product/edit/{product}', [ProductController::class, 'edit']);
     Route::put('/back-seller/product/update/{product}', [ProductController::class, 'update']);
     Route::delete('/back-seller/product/destroy/{product}', [ProductController::class, 'destroy']);
+
+    Route::get('/back-seller/material', [SellerMaterialController::class, 'index']);
+    Route::post('/back-seller/material/new', [SellerMaterialController::class, 'store']);
+    Route::post('/back-seller/material/edit/{material}', [SellerMaterialController::class, 'edit']);
+    Route::put('/back-seller/material/update/{material}', [SellerMaterialController::class, 'update']);
+    Route::delete('/back-seller/material/destroy/{material}', [SellerMaterialController::class, 'destroy']);
 });
 
 Route::group(['middleware' => ['role:customer']], function () {

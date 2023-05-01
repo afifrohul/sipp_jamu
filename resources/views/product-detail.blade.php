@@ -6,7 +6,7 @@
   <section class="text-gray-700 body-font overflow-hidden bg-white">
     <div class="container px-5 py-10 mx-auto">
       <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 max-h-96 w-full object-cover object-center rounded border border-gray-200" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80x`">
+        <img alt="ecommerce" class="lg:w-1/2 max-h-96 w-full object-cover object-center rounded border border-gray-200" src="https://s3.dimanaja.com/resep/cover/sinom-4cc13c1.webp">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           {{-- <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2> --}}
           <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Jamu Sinom</h1>

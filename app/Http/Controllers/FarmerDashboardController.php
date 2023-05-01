@@ -16,8 +16,8 @@ class FarmerDashboardController extends Controller
     public function index()
     {
         try {
-            $this->param['getCountMaterial'] = Material::count();
-            $this->param['getCountProduck'] = Product::count();
+            $this->param['getCountMaterial'] = Material::where('user_id', auth()->user()->id)->count();
+            $this->param['getCountProduct'] = Product::count();
             
             return view('farmer.pages.dashboard.dashboard',$this->param);
         } catch (\Exception $e) {

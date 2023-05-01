@@ -36,6 +36,9 @@
                   <x-dropdown-link href="{{ url('/back-dashboard') }}">
                       Dashboard
                   </x-dropdown-link>
+                  @if ((Auth::user()->roles->pluck('name')[0]) == 'customer')
+                  <x-dropdown-link href="{{ url('/') }}">Kelola Akun</x-dropdown-link>
+                  @endif
                   <form method="POST" action="{{ route('logout') }}">
                       @csrf
                       {{-- <x-dropdown-link :href="route('logout')"

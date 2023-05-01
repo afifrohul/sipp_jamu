@@ -13,7 +13,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('name')}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Jamu Sinom" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Produk: </label>
-                    <input type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem ipsum dolor sit amet" value="{{old('description')}}">
+                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Jamu sinom adalah jamu yang bermanfaat untuk..." value="{{old('description')}}"></textarea>
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -30,7 +30,7 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Harga(Rp): </label>
+                    <label class="text-gray-700 ml-1">Harga (Rp): </label>
                     <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('price')}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">

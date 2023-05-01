@@ -16,7 +16,7 @@
             <div class="dropdown relative md:static">
                 <button class="menu-btn focus:outline-none flex flex-wrap items-center">
                     <div class="w-8 h-8 overflow-hidden rounded-full">
-                        <img class="w-full h-full object-cover" src="{{asset('assets/img-admin/avatar-log.jpg')}}" >
+                        <img class="w-full h-full object-cover" src="{{asset('assets/upload/user/default.png')}}" >
                     </div> 
 
                     <div class="ml-2 capitalize flex ">
@@ -30,10 +30,12 @@
                         <i class="fad fa-user-edit text-xs mr-1"></i> 
                         Halaman Utama
                     </a>
+                    @if ((Auth::user()->roles->pluck('name')[0]) == 'customer')
                     <a class="px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#">
                         <i class="fad fa-user-edit text-xs mr-1"></i> 
                         edit my profile
                     </a>
+                    @endif
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="w-full text-left px-4 py-2 block capitalize font-medium text-sm tracking-wide bg-white hover:bg-gray-200 hover:text-gray-900 transition-all duration-300 ease-in-out" href="#" onclick="return confirm('Apakah anda ingin logout?')">

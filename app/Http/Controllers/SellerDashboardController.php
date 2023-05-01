@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Product;
+use App\Models\Material;
 use Illuminate\Http\Request;
 
 class SellerDashboardController extends Controller
@@ -23,7 +24,8 @@ class SellerDashboardController extends Controller
     {
                 
         try {
-            $this->param['getCountProduct'] = Product::count();
+            $this->param['getCountProduct'] = Product::where('seller_id', auth()->user()->id)->count();
+            $this->param['getCountMaterial'] = Material::where('user_id', auth()->user()->id)->count();
             
             return view('seller.pages.dashboard.dashboard', $this->param);
         } catch (\Exception $e) {

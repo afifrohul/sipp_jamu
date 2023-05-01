@@ -100,7 +100,7 @@
         <div class="grid grid-cols-3 gap-4 mt-6">
         <a href="{{ url('/product-detail') }}">
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                <img class="object-cover w-full h-72" src="https://s3.dimanaja.com/resep/cover/sinom-4cc13c1.webp" alt="thumbnail">
                 <div class="px-2 py-4">
                 <div class="font-bold text-sm lg:text-base mb-2">Jamu Sinom</div>
                 <p class="text-gray-700 text-xs lg:text-sm">
@@ -111,7 +111,7 @@
         </a>
         <a href="{{ url('/product-detail') }}">
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                <img class="object-cover w-full h-72" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQVqWgU3JEzRUDigzirA39GqCgz9ftc6i3GV1h3rYU_5beX8dfQuHt-5u4t0BAanNkmNA&usqp=CAU" alt="thumbnail">
                 <div class="px-2 py-4">
                     <div class="font-bold text-sm lg:text-base mb-2">Jamu Beras Kencur</div>
                     <p class="text-gray-700 text-xs lg:text-sm">
@@ -122,7 +122,7 @@
         </a>
         <a href="{{ url('/product-detail') }}">
             <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
+                <img class="object-cover w-full h-72" src="https://cdn-2.tstatic.net/suryamalang/foto/bank/images/daftar-8-manfaat-temulawak-untuk-kesehatan-tubuh-cegah-penyakit-kanker-jantung-dan-obat-maag.jpg" alt="thumbnail">
                 <div class="px-2 py-4">
                     <div class="font-bold text-sm lg:text-base mb-2">Jamu Temulawak</div>
                     <p class="text-gray-700 text-xs lg:text-sm">
@@ -143,7 +143,7 @@
         <div class="flex flex-wrap mt-10 ">
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-contain object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/3.png') }}">
                 <p class="leading-relaxed">Rasanya enak banget,,anak saya sampai nambah terus,,meningkatkan nafsu makan,,setelah mengkonsumsi jamu beras kencur ini bb anak saya cepat bertambah,,terima kasih seller .</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">sri rahayu (jamu beras kencur 5/5)</h2>
@@ -151,7 +151,7 @@
             </div>
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-fill object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/3.png') }}">
                 <p class="leading-relaxed">Beli lagi karena rasanya enak dan menyegarkan. Seller beneran gercep dan pengemasan produk sangat rapi. Pengiriman juga cepat. Pokoknya recommended banget.</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Tina Putri (Jamu sinom 5/5)</h2>
@@ -159,7 +159,7 @@
             </div>
             <div class="lg:w-1/3 lg:mb-0 p-4">
                 <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-fill object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/1.png') }}">
                 <p class="leading-relaxed">Terimakasih kak..sudah sampai paketnya..nyoba ikhtiar dengan jamu tradisional buat nyembuhin penyakit liver bapak saya..semoga cocok..kalo cocok insyaAllah repeat order lagi</p>
                 <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Ibrahim (Jamu temulawak 4/5)</h2>

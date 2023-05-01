@@ -18,9 +18,9 @@ class CreateMaterialsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->text('image');
-            $table->integer('price');
+            $table->integer('price')->nullable();
             $table->integer('stock');
-            $table->foreignId('farmer_id');
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

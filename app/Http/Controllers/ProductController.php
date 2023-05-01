@@ -65,7 +65,7 @@ class ProductController extends Controller
             $product = new Product();
             $product->name = $request->name;
             $product->description = $request->description;
-            $product->seller_id = 3;
+            $product->user = auth()->user()->id;
             $product->price = $request->price;
             $product->stock = $request->stock;
             if ($request->file('image')) {

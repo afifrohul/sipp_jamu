@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Material;
 
-class MaterialController extends Controller
+class SellerMaterialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,8 @@ class MaterialController extends Controller
     public function index()
     {
         try {
-            $this->param['getAllMaterial'] = Material::where('user_id' ,auth()->user()->id)->get();
-            return view('farmer.pages.material.page-list-material', $this->param);
+            $this->param['getAllMaterial'] = Material::where('user_id', auth()->user()->id)->get();
+            return view('seller.pages.material.page-list-material', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
@@ -47,7 +47,6 @@ class MaterialController extends Controller
         [
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required',
             'stock' => 'required',
         ],
         [
@@ -66,7 +65,6 @@ class MaterialController extends Controller
             $material->name = $request->name;
             $material->description = $request->description;
             $material->user_id = auth()->user()->id;
-            $material->price = $request->price;
             $material->stock = $request->stock;
             if ($request->file('image')) {
                 $request->file('image')->move('assets/upload/material', $date.$random.$request->file('image')->getClientOriginalName());
@@ -76,7 +74,7 @@ class MaterialController extends Controller
             }
             $material->save();
 
-            return redirect('/back-farmer/material')->withStatus('Berhasil menambah data.');
+            return redirect('/back-seller/material')->withStatus('Berhasil menambah data.');
 
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -106,7 +104,7 @@ class MaterialController extends Controller
     {
         try {
             $this->param['getDetailMaterial'] = Material::find($material->id);
-            return view('farmer.pages.material.page-edit-material', $this->param);
+            return view('seller.pages.material.page-edit-material', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
@@ -127,7 +125,6 @@ class MaterialController extends Controller
         [
             'name' => 'required',
             'description' => 'required',
-            'price' => 'required',
             'stock' => 'required',
         ],
         [
@@ -135,7 +132,8 @@ class MaterialController extends Controller
         ],
         [
             'name' => 'Nama',
-            'description' => 'Deskripsi'
+            'description' => 'Deskripsi',
+            'stock' => 'Stok'
         ]);
 
         try {
@@ -145,7 +143,6 @@ class MaterialController extends Controller
             $material = Material::find($material->id);
             $material->name = $request->name;
             $material->description = $request->description;
-            $material->price = $request->price;
             $material->stock = $request->stock;
             if ($request->file('image')) {
                 $request->file('image')->move('assets/upload/material', $date.$random.$request->file('image')->getClientOriginalName());
@@ -153,7 +150,7 @@ class MaterialController extends Controller
             } 
             $material->save();
 
-            return redirect('/back-farmer/material')->withStatus('Berhasil mengubah data.');
+            return redirect('/back-seller/material')->withStatus('Berhasil mengubah data.');
 
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -172,7 +169,7 @@ class MaterialController extends Controller
     {
         try {
             Material::find($material->id)->delete();
-            return redirect('/back-farmer/material')->withStatus('Berhasil menghapus data.');
+            return redirect('/back-seller/material')->withStatus('Berhasil menghapus data.');
         } catch(\Throwable $e){
             return redirect()->back()->withError($e->getMessage());
         } catch(\Illuminate\Database\QueryException $e){

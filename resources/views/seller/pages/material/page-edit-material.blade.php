@@ -1,16 +1,16 @@
-@extends('farmer.layouts.app')
+@extends('seller.layouts.app')
 @section('content')
 <div>
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">Edit Katalog Produk</h1>
+            <h1 class="h6">Edit Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-farmer/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data" novalidate>
+            <form method="POST" action="{{url('/back-seller/material/update',$getDetailMaterial->id)}}" enctype="multipart/form-data" novalidate>
                 @method('PUT')
                 @csrf
                 <div>
-                    <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
+                    <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
                     <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{$getDetailMaterial->name}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -19,18 +19,9 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
+                    <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
                     <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." >{{ $getDetailMaterial->description }}</textarea>
                     @error('description')
-                    <span class="pl-1 text-xs text-red-600 text-bold">
-                        {{$message}}
-                    </span>
-                    @enderror
-                </div>
-                <div>
-                    <label class="text-gray-700 ml-1">Harga(Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailMaterial->price}}">
-                    @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
                     </span>
@@ -73,7 +64,7 @@
                     <button type="submit" onclick="return confirm('Apakah ingin menyimpan perubahan ?')"class="btn-shadow">Selesai</button>
                 </div>
             </form>
-            <button class="btn-shadow-cancel mt-2"><a href="{{ url('/back-farmer/material') }}"> Batal</a></button>
+            <button class="btn-shadow-cancel mt-2"><a href="{{ url('/back-seller/material') }}"> Batal</a></button>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
 <div>
     <div class="card">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">List Produk Seller</h1>
+            <h1 class="h6">List Pesanan</h1>
         </div>
         <div class="card-body">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
@@ -17,66 +17,66 @@
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Seller
+                                Nama Pembeli
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Produk
+                                Nama Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Deskripsi Produk
+                                Jumlah
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Harga
+                                Total Harga
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Stok Tersedia
+                                Status
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Foto
+                                Bukti Pembayaran
                             </th>
-                            {{-- <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Opsi
-                            </th> --}}
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Konfirmasi Pesanan
+                            </th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        @foreach ($getAllProduct as $item)
+                        @foreach ($getAllTransaction as $item)
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$loop->iteration}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{ $item->seller->name }}</div>
+                                <div class="text-sm text-gray-900">{{ $item->user->name }}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{$item->name}}</div>
+                                <div class="text-sm text-gray-900">{{$item->material->name}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{!! Str::limit($item->description, 40)!!}</div>
+                                <div class="text-sm text-gray-900">{{ $item->qty }}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{$item->price}}</div>
+                                <div class="text-sm text-gray-900">{{$item->total_price}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{$item->stock}}</div>
+                                <div class="text-sm text-gray-900">{{$item->status_accept}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">
-                                    <img class="h-16 object-cover m-auto" src="{{asset('assets/upload/product')}}/{{$item->image}}">
+                                    <img class="h-16 object-cover m-auto" src="{{asset('assets/upload/payment')}}/{{$item->prove_payment}}">
                                 </div>
                             </td>
                             
-                            {{-- <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
-                                <form action="{{url('/back-farmer/product/edit',$item->id)}}" method="POST" class="inline">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
+                                <form action="{{url('/back-farmer/transaction/edit',$item->id)}}" method="POST" class="inline">
                                     @csrf
-                                    <button type="submit" class="bg-teal-500 h-10 w-10 rounded hover:bg-teal-600"><i class="fa fa-pencil text-white"></i></button>
+                                    <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
-                                <form action="{{url('/back-farmer/product/destroy',$item->id)}}" method="POST" class="inline">
+                                {{-- <form action="{{url('/back-farmer/product/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>
-                                </form>
-                            </td> --}}
+                                </form> --}}
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

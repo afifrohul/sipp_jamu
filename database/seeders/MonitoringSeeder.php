@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\Monitoring;
 use Illuminate\Database\Seeder;
 
 class MonitoringSeeder extends Seeder
@@ -13,6 +13,6 @@ class MonitoringSeeder extends Seeder
      */
     public function run()
     {
-        //
+
     }
 }

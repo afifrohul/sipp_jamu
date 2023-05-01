@@ -89,13 +89,13 @@
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="email" :value="__('Email')" />
 
-                                <x-input id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="email" name="email" :value="old('email', $request->email)" placeholder="alamatemail@gmail.com" required />
+                                <x-input id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="email" name="email" :value="old('email', $request->email)" placeholder="alamatemail@gmail.com" readonly />
                             </div>
 
                             <!-- Password -->
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password" :value="__('Password')" />
-
+                                
                                 <x-input id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
                                                 type="password"
                                                 name="password"

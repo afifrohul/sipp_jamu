@@ -16,6 +16,11 @@ class Product extends Model
         return $this->hasMany(Review::class);
     }
 
+    public function transaction()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
     public function seller()
     {
         return $this->belongsTo(User::class);

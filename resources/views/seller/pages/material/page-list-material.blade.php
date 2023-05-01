@@ -1,4 +1,4 @@
-@extends('farmer.layouts.app')
+@extends('seller.layouts.app')
 @section('extraCSS')
 <link href="{{ asset('assets/vendor-admin/summernote/summernote.min.css') }}" rel="stylesheet">
 @endsection
@@ -6,13 +6,13 @@
 <div>
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">Tambah Katalog Produk</h1>
+            <h1 class="h6">Tambah Bahan Baku</h1>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{url('/back-farmer/material/new')}}" enctype="multipart/form-data" novalidate>
+            <form method="POST" action="{{url('/back-seller/material/new')}}" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div>
-                    <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
+                    <label class="text-gray-700 ml-1">Nama Bahan Baku: </label>
                     <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -21,18 +21,9 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
-                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan...">{{ old('description') }}</textarea>
+                    <label class="text-gray-700 ml-1">Deskripsi Bahan Baku: </label>
+                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." value="">{{old('description')}}</textarea>
                     @error('description')
-                    <span class="pl-1 text-xs text-red-600 text-bold">
-                        {{$message}}
-                    </span>
-                    @enderror
-                </div>
-                <div>
-                    <label class="text-gray-700 ml-1">Harga (Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('price')}}">
-                    @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
                     </span>
@@ -79,7 +70,7 @@
     </div>
     <div class="card">
         <div class="card-header flex flex-row justify-between">
-            <h1 class="h6">List Katalog Produk</h1>
+            <h1 class="h6">List Bahan Baku</h1>
         </div>
         <div class="card-body">
             <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
@@ -90,13 +81,10 @@
                                 No
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Nama Katalog Produk
+                                Nama Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Deskripsi Katalog Produk
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Harga (per gram)
+                                Deskripsi Bahan Baku
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Stok Tersedia (gram)
@@ -122,9 +110,6 @@
                                 <div class="text-sm text-gray-900">{!! Str::limit($item->description, 40)!!}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
-                                <div class="text-sm text-gray-900">{{$item->price}}</div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$item->stock}}</div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
@@ -134,11 +119,11 @@
                             </td>
                             
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
-                                <form action="{{url('/back-farmer/material/edit',$item->id)}}" method="POST" class="inline">
+                                <form action="{{url('/back-seller/material/edit',$item->id)}}" method="POST" class="inline">
                                     @csrf
                                     <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
-                                {{-- <form action="{{url('/back-farmer/material/destroy',$item->id)}}" method="POST" class="inline">
+                                {{-- <form action="{{url('/back-seller/material/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>

@@ -11,8 +11,13 @@ class Material extends Model
     protected $table = 'materials';
     protected $primaryKey = 'id';
 
-    public function farmer()
+    public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function transaction()
+    {
+        return $this->hasMany(Transaction::class);
     }
 }

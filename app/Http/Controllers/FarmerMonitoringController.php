@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Material;
 use Illuminate\Http\Request;
 
 class FarmerMonitoringController extends Controller
@@ -12,11 +13,28 @@ class FarmerMonitoringController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function monitor_product()
     {
         try {
             $this->param['getAllProduct'] = Product::all();
             return view('farmer.pages.monitor.page-list-monitor-product', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function monitor_material()
+    {
+        try {
+            $this->param['getAllMaterialSeller'] = Material::where('user_id', '!=', auth()->user()->id)->get();
+            return view('farmer.pages.monitor.page-list-monitor-material', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
