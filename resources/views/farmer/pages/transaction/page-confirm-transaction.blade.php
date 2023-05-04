@@ -52,7 +52,7 @@
                         <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') seleccted @endif>Pending</option>
                         <option value="accept"  @if ($getDetailTransaction->status_accept == 'acceot') seleccted @endif>Terima</option>
                         <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') seleccted @endif>Tolak</option>
-                        <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') seleccted @endif>Suday Bayar</option>
+                        <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') seleccted @endif>Sudah Bayar</option>
                     </select>
                 </div>
                 <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center">

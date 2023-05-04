@@ -11,7 +11,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->name}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{ old('name',$getDetailProduct->name)}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Produk: </label>
-                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum">{{$getDetailProduct->description}}</textarea>
+                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum">{{ old('description',$getDetailProduct->description)}}</textarea>
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Harga (Rp): </label>
-                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->price}}">
+                    <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{ old('price',$getDetailProduct->price)}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Stok: </label>
-                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailProduct->stock}}">
+                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{ old('stock',$getDetailProduct->stock)}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}

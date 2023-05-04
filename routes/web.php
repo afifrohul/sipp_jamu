@@ -83,13 +83,13 @@ Route::group(['middleware' => ['role:seller']], function () {
 
     Route::get('/back-seller/product', [ProductController::class, 'index']);
     Route::post('/back-seller/product/new', [ProductController::class, 'store']);
-    Route::post('/back-seller/product/edit/{product}', [ProductController::class, 'edit']);
+    Route::get('/back-seller/product/edit/{product}', [ProductController::class, 'edit']);
     Route::put('/back-seller/product/update/{product}', [ProductController::class, 'update']);
     Route::delete('/back-seller/product/destroy/{product}', [ProductController::class, 'destroy']);
 
     Route::get('/back-seller/material', [SellerMaterialController::class, 'index']);
     Route::post('/back-seller/material/new', [SellerMaterialController::class, 'store']);
-    Route::post('/back-seller/material/edit/{material}', [SellerMaterialController::class, 'edit']);
+    Route::get('/back-seller/material/edit/{material}', [SellerMaterialController::class, 'edit']);
     Route::put('/back-seller/material/update/{material}', [SellerMaterialController::class, 'update']);
     Route::delete('/back-seller/material/destroy/{material}', [SellerMaterialController::class, 'destroy']);
 });
