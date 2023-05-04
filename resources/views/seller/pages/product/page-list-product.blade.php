@@ -138,11 +138,11 @@
                                     @csrf
                                     <button type="submit" class="bg-yellow-500 h-10 w-10 rounded hover:bg-yellow-600"><i class="fa fa-pencil text-white"></i></button>
                                 </form>
-                                <form action="{{url('/back-seller/product/destroy',$item->id)}}" method="POST" class="inline">
+                                {{-- <form action="{{url('/back-seller/product/destroy',$item->id)}}" method="POST" class="inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>
-                                </form>
+                                </form> --}}
                             </td>
                         </tr>
                         @endforeach

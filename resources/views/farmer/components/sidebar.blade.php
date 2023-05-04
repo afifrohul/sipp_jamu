@@ -40,7 +40,7 @@
 
         <a href="" class="mb-3 @if (Request::segment(2) == 'summary-seller') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
-            &nbsp;Rekapan Penjualan Seller
+            &nbsp;Reporting
         </a>
     
     </div>
