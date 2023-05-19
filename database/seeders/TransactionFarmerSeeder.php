@@ -1,10 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Transaction;
+use App\Models\FarmerTransaction;
 use Illuminate\Database\Seeder;
 
-class TransactionSeeder extends Seeder
+class TransactionFarmerSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class TransactionSeeder extends Seeder
      */
     public function run()
     {
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 1,
             'qty' => 1000,
@@ -22,7 +22,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 2,
             'qty' => 1000,
@@ -31,7 +31,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 1000,
@@ -40,7 +40,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 1000,
@@ -50,7 +50,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 1000,
@@ -60,7 +60,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 1000,
@@ -70,7 +70,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 1000,
@@ -80,7 +80,7 @@ class TransactionSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
-        $transaction = Transaction::create([
+        $transactionMaterial = FarmerTransaction::create([
             'user_id' => 3,
             'material_id' => 3,
             'qty' => 6000,

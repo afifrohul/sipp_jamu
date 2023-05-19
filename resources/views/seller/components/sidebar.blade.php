@@ -21,5 +21,15 @@
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Stok Bahan Baku
         </a>
+
+        <a href="/back-seller/transaction" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+            <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
+            &nbsp;Pesanan
+        </a>
+        
+        <a href="/back-seller/history-transaction" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+            <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
+            &nbsp;Riwayat Pesanan
+        </a>
     </div>
 </div>

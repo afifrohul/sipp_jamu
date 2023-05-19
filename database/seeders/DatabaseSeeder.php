@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\RoleSeeder;
 use Database\Seeders\UserSeeder;
-use Database\Seeders\TransactionSeeder;
+use Database\Seeders\TransactionFarmerSeeder;
+use Database\Seeders\TransactionSellerSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,7 +21,8 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             UserSeeder::class,
             ReviewSeeder::class,
-            TransactionSeeder::class,
+            TransactionFarmerSeeder::class,
+            TransactionSellerSeeder::class,
             MonitoringSeeder::class,
             ProductSeeder::class,
             MaterialSeeder::class,

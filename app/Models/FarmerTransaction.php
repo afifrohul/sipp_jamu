@@ -5,24 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class FarmerTransaction extends Model
 {
     use HasFactory;
-    protected $table = 'materials';
+    protected $table = 'farmer_transactions';
     protected $primaryKey = 'id';
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-
-    public function transaction()
+    public function material()
     {
-        return $this->hasMany(Transaction::class);
-    }
-
-    public function material_galleries()
-    {
-        return $this->belongsTo(MaterialGallery::class);
+        return $this->belongsTo(Material::class);
     }
 }

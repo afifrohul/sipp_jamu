@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\FarmerTransaction;
-class FarmerTransactionController extends Controller
+use App\Models\SellerTransaction;
+class SellerTransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class FarmerTransactionController extends Controller
     public function index()
     {
         try {
-            $this->param['getAllTransaction'] = FarmerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
-            return view('farmer.pages.transaction.page-list-transaction', $this->param);
+            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            return view('seller.pages.transaction.page-list-transaction', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
@@ -27,8 +27,8 @@ class FarmerTransactionController extends Controller
     public function history()
     {
         try {
-            $this->param['getAllTransaction'] = FarmerTransaction::where('status_accept', 'paid')->orWhere('status_accept', 'decline')->get();
-            return view('farmer.pages.transaction.page-list-history-transaction', $this->param);
+            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            return view('seller.pages.transaction.page-list-history-transaction', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
@@ -68,11 +68,11 @@ class FarmerTransactionController extends Controller
         //
     }
 
-    public function edit(FarmerTransaction $transaction)
+    public function edit(SellerTransaction $transaction)
     {
         try {
-            $this->param['getDetailTransaction'] = FarmerTransaction::find($transaction->id);
-            return view('farmer.pages.transaction.page-confirm-transaction', $this->param);
+            $this->param['getDetailTransaction'] = SellerTransaction::find($transaction->id);
+            return view('seller.pages.transaction.page-confirm-transaction', $this->param);
         } catch(\Throwable $e){
             return redirect()->back()->withError($e->getMessage());
         } catch(\Illuminate\Database\QueryException $e){
@@ -80,17 +80,17 @@ class FarmerTransactionController extends Controller
         }
     }
 
-    public function update(Request $request, FarmerTransaction $transaction)
+    public function update(Request $request, SellerTransaction $transaction)
     {
         try {
-            $transaction = FarmerTransaction::find($transaction->id);
+            $transaction = SellerTransaction::find($transaction->id);
             $transaction->status_accept = $request->status_accept;
             $transaction->save();
-            return redirect('/back-farmer/transaction')->withStatus('Berhasil memperbarui data.');
+            return redirect('/back-seller/transaction')->withStatus('Berhasil memperbarui data.');
         } catch(\Throwable $e){
-            return redirect('/back-farmer/transaction')->withError($e->getMessage());
+            return redirect('/back-seller/transaction')->withError($e->getMessage());
         } catch(\Illuminate\Database\QueryException $e){
-            return redirect('/back-farmer/transaction')->withError($e->getMessage());
+            return redirect('/back-seller/transaction')->withError($e->getMessage());
         }
 
     }

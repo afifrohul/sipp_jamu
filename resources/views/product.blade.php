@@ -37,7 +37,7 @@
                         <div class="px-2 py-4">
                             <div class="font-bold text-sm lg:text-base mb-2">{{ $item->name }}</div>
                             <p class="text-gray-700 text-xs lg:text-sm">
-                                {{ $item->description }}
+                                {{Str::limit($item->description, 100)}}
                             </p>
                         </div>
                     </div>
