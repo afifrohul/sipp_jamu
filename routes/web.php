@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeCustomer;
+use App\Http\Controllers\HomeCustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
@@ -40,8 +40,9 @@ Route::get('/product-detail', function () {
     return view('product-detail');
 });
 
-Route::get('/', [HomeCustomer::class, 'indexHome']);
-Route::get('/product', [HomeCustomer::class, 'indexProduct']);
+Route::get('/', [HomeCustomerController::class, 'indexHome']);
+Route::get('/product', [HomeCustomerController::class, 'indexProduct']);
+Route::get('/product-detail/{product}', [HomeCustomerController::class, 'show']);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

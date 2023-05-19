@@ -6,12 +6,12 @@
   <section class="text-gray-700 body-font overflow-hidden bg-white">
     <div class="container px-5 py-10 mx-auto">
       <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 max-h-96 w-full object-cover object-center rounded border border-gray-200" src="https://s3.dimanaja.com/resep/cover/sinom-4cc13c1.webp">
+        <img alt="ecommerce" class="lg:w-1/2 max-h-96 w-full object-cover object-center rounded border border-gray-200" src="{{ asset('assets/upload/product/'.$getDetailProduct->image) }}">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           {{-- <h2 class="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2> --}}
-          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">Jamu Sinom</h1>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{ $getDetailProduct->name }}</h1>
           
-          <p class="leading-relaxed">Jamu sinom terbuat dari asam jawa yang dipadu dengan kunyit, gula merah, temulawak dan rempah lainnya.</p>
+          <p class="leading-relaxed">{{ $getDetailProduct->description }}</p>
           <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
             <div class="w-full">
               <label class="text-gray-700 ml-1">Kuantitas:</label>
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="flex">
-            <span class="title-font font-medium text-2xl text-gray-900">Rp5.000</span>
+            <span class="title-font font-medium text-2xl text-gray-900">Rp{{ $getDetailProduct->price }}</span>
             <button class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Beli Sekarang</button>
           </div>
         </div>

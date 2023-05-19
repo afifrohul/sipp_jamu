@@ -99,17 +99,20 @@
     <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3>
     <div class="grid grid-cols-3 gap-4 mt-6">
         @foreach ($getAllProduct as $item)
-        <a href="{{ url('/product-detail') }}">
-            <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                <img class="object-cover w-full h-72" src="{{ asset('assets/upload/product/'.$item->image) }}" alt="thumbnail">
-                <div class="px-2 py-4">
-                    <div class="font-bold text-sm lg:text-base mb-2">{{ $item->name }}</div>
-                    <p class="text-gray-700 text-xs lg:text-sm">
-                        {{ $item->description }}
-                    </p>
-                </div>
-            </div>
-        </a>
+            <form action="{{url('/product-detail',$item->id)}}" method="GET" class="inline">
+            @csrf
+                <button type="submit" class="">
+                    <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
+                        <img class="object-cover w-full h-72" src="{{ asset('assets/upload/product/'.$item->image) }}" alt="thumbnail">
+                        <div class="px-2 py-4">
+                            <div class="font-bold text-sm lg:text-base mb-2">{{ $item->name }}</div>
+                            <p class="text-gray-700 text-xs lg:text-sm">
+                                {{ $item->description }}
+                            </p>
+                        </div>
+                    </div>
+                </button>
+            </form>
         @endforeach
     </div>
     <h3 class="mt-6 text-end">

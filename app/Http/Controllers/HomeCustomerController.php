@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class HomeCustomer extends Controller
+class HomeCustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -60,12 +60,19 @@ class HomeCustomer extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        try {
+            $this->param['getDetailProduct'] = Product::find($product->id);
+            return view('product-detail', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }  
     }
 
     /**
