@@ -28,50 +28,20 @@
     <section class="container px-6 py-8 mx-auto lg:py-16" id="product">
         {{-- <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3> --}}
         <div class="grid grid-cols-4 gap-4 mt-6">
+            @foreach ($getAllProduct as $item)
+                
             <a href="{{ url('/product-detail') }}">
-            <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                <img class="object-cover w-full h-72" src="https://s3.dimanaja.com/resep/cover/sinom-4cc13c1.webp" alt="thumbnail">
-                <div class="px-2 py-4">
-                <div class="font-bold text-sm lg:text-base mb-2">Jamu Sinom</div>
-                <p class="text-gray-700 text-xs lg:text-sm">
-                    Jamu sinom terbuat dari asam jawa yang dipadu dengan kunyit, gula merah, temulawak dan rempah lainnya.
-                </p>
+                <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
+                    <img class="object-cover w-full h-72" src="{{ asset('assets/upload/product/'.$item->image) }}" alt="thumbnail">
+                    <div class="px-2 py-4">
+                        <div class="font-bold text-sm lg:text-base mb-2">{{ $item->name }}</div>
+                        <p class="text-gray-700 text-xs lg:text-sm">
+                            {{ $item->description }}
+                        </p>
+                    </div>
                 </div>
-            </div>
             </a> 
-            <a href="{{ url('/product-detail') }}">
-                <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                    <img class="object-cover w-full h-72" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQVqWgU3JEzRUDigzirA39GqCgz9ftc6i3GV1h3rYU_5beX8dfQuHt-5u4t0BAanNkmNA&usqp=CAU" alt="thumbnail">
-                    <div class="px-2 py-4">
-                        <div class="font-bold text-sm lg:text-base mb-2">Jamu beras kencur</div>
-                        <p class="text-gray-700 text-xs lg:text-sm">
-                            Jamu beras kencur terbuat dari beras dan rimpang kencur.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="{{ url('/product-detail') }}">
-                <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                    <img class="object-cover w-full h-72" src="https://cdn-2.tstatic.net/suryamalang/foto/bank/images/daftar-8-manfaat-temulawak-untuk-kesehatan-tubuh-cegah-penyakit-kanker-jantung-dan-obat-maag.jpg" alt="thumbnail">
-                    <div class="px-2 py-4">
-                        <div class="font-bold text-sm lg:text-base mb-2">Jamu Temulawak</div>
-                        <p class="text-gray-700 text-xs lg:text-sm">
-                             Jamu terbuat dari temulawak yang dihaluskan dan ditambahkan dengan asam jawa, gula aren, daun pandan, dan jinten.
-                        </p>
-                    </div>
-                </div>
-            </a>
-            <a href="{{ url('/product-detail') }}">
-                <div class="border-2 rounded-md hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md ease-linear overflow-hidden">
-                    <img class="object-cover w-full h-72" src="https://images.unsplash.com/photo-1593194541866-87bf38376f07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="thumbnail">
-                    <div class="px-2 py-4">
-                        <div class="font-bold text-sm lg:text-base mb-2">Lorem, ipsum dolor.</div>
-                        <p class="text-gray-700 text-xs lg:text-sm">
-                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
-                        </p>
-                    </div>
-                </div>
-            </a>
+            @endforeach
     </div>
 </section>
 </main>

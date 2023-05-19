@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeCustomer;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
@@ -24,20 +25,23 @@ use App\Http\Controllers\FarmerTransactionController;
 |
 */
 
-Route::get('/', function () {
-    // return redirect('/back-login');
-    return view('home');
-});
+// Route::get('/', function () {
+//     // return redirect('/back-login');
+//     return view('home');
+// });
 
-Route::get('/product', function () {
-    // return redirect('/back-login');
-    return view('product');
-});
+// Route::get('/product', function () {
+//     // return redirect('/back-login');
+//     return view('product');
+// });
 
 Route::get('/product-detail', function () {
     // return redirect('/back-login');
     return view('product-detail');
 });
+
+Route::get('/', [HomeCustomer::class, 'indexHome']);
+Route::get('/product', [HomeCustomer::class, 'indexProduct']);
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
