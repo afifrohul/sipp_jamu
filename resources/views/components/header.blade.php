@@ -29,13 +29,13 @@
               <x-slot name="content">
                   <!-- Authentication -->
                   <x-dropdown-link href="{{ url('/') }}">
-                      Halaman Utama
+                      <i class="fad fa-home text-xs mr-1"></i> Halaman Utama
                   </x-dropdown-link>
                   <x-dropdown-link href="{{ url('/product') }}">
-                      Produk
+                      <i class="fad fa-jug text-xs mr-1"></i> Produk
                   </x-dropdown-link>
                   <x-dropdown-link href="{{ url('/back-dashboard') }}">
-                      Dashboard
+                      <i class="fad fa-bars text-xs mr-1"></i>Dashboard
                   </x-dropdown-link>
                   @if ((Auth::user()->roles->pluck('name')[0]) == 'customer')
                   <x-dropdown-link href="{{ url('/') }}">Kelola Akun</x-dropdown-link>

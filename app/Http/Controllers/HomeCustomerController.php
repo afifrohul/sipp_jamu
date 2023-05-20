@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\FarmerTransaction;
+use App\Models\SellerTransaction;
 use Illuminate\Http\Request;
 
 class HomeCustomerController extends Controller
@@ -16,6 +18,8 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getAllProduct'] = Product::where('stock', '>', '0')->take(3)->get();
+            $this->param['getNewTransactionFarmer'] = FarmerTransaction::where('status_accept', 'pending')->count();
+            $this->param['getNewTransactionSeller'] = SellerTransaction::where('status_accept', 'pending')->count();
             return view('home', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

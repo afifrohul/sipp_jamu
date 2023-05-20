@@ -2,6 +2,37 @@
 @section('content')
 <main>
     <section class="px-5">
+        @auth
+            
+        @if (\Auth::user()->roles->pluck('name')[0] == 'farmer')
+        @if ($getNewTransactionFarmer > 0)
+            <div class="alert alert-default mb-5 flex justify-between">
+                <div class="flex gap-2 items-center">
+                        <i class="fad fa-bell-on text-lg"></i>
+                        <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong> Terdapat {{ $getNewTransactionFarmer }} pesanan menunggu konfirmasi. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-farmer/transaction') }}">Klik disini untuk melihat.</a> </p>
+                    </div>
+                    <button class="alert-btn-close">
+                        <i class="fad fa-times text-lg"></i>
+                    </button>
+            </div>
+            @endif
+        @endif
+            
+        @if (\Auth::user()->roles->pluck('name')[0] == 'seller')
+            @if ($getNewTransactionSeller > 0)
+            <div class="alert alert-default mb-5 flex justify-between">
+                <div class="flex gap-2 items-center">
+                    <i class="fad fa-bell-on text-lg"></i>
+                    <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong> Terdapat {{ $getNewTransactionSeller }} pesanan menunggu konfirmasi. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-seller/transaction') }}">Klik disini untuk melihat.</a> </p>
+                </div>
+                <button class="alert-btn-close">
+                    <i class="fad fa-times text-lg"></i>
+                </button>
+            </div>
+            @endif
+        @endif
+        @endauth
+    
         <div class="relative grid w-full rounded-xl bg-gradient-to-t from-yellow-100 to-gray-100 h-96 lg:h-[32rem] place-items-center">
             <div class="flex flex-col items-center mx-auto text-center px-6">
                 <h1 class="text-lg md:text-4xl max-w-3xl font-bold text-gray-900 font-sans">Temukan Beragam Pilihan <span class="text-yellow-500"> Jamu Herbal </span> Terbaik untuk Menjaga Kesehatanmu di <span class="text-yellow-500">Sini!</span> </h1>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Material;
 use App\Models\Product;
+use App\Models\FarmerTransaction;
 class FarmerDashboardController extends Controller
 {
     /**
@@ -18,7 +19,10 @@ class FarmerDashboardController extends Controller
         try {
             $this->param['getCountMaterial'] = Material::where('user_id', auth()->user()->id)->count();
             $this->param['getCountProduct'] = Product::count();
-            
+            $this->param['getCountMaterialSeller'] = Material::where('user_id', '!=' ,auth()->user()->id)->count();
+            $this->param['getCountTransaction'] = FarmerTransaction::all()->count();
+            $this->param['getCountTransactionPending'] = FarmerTransaction::where('status_accept', 'pending')->count();
+
             return view('farmer.pages.dashboard.dashboard',$this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

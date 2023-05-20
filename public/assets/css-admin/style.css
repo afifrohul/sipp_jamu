@@ -1281,20 +1281,7 @@ div.code-toolbar .toolbar button:hover {
   font-size: 0.875rem
 }
 
-.alert a {
-  font-weight: 800;
-  --text-opacity: 1;
-  color: #000;
-  color: rgba(0, 0, 0, var(--text-opacity));
-  font-size: 1rem;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms
-}
 
-.alert a:hover {
-  opacity: 0.75
-}
 
 .alert-default {
   --bg-opacity: 1;
@@ -1308,11 +1295,6 @@ div.code-toolbar .toolbar button:hover {
   color: rgba(56, 178, 172, var(--text-opacity))
 }
 
-.alert-default a {
-  --text-opacity: 1;
-  color: #2c7a7b;
-  color: rgba(44, 122, 123, var(--text-opacity))
-}
 
 .alert-light {
   --bg-opacity: 1;
@@ -1326,11 +1308,6 @@ div.code-toolbar .toolbar button:hover {
   color: rgba(113, 128, 150, var(--text-opacity))
 }
 
-.alert-light a {
-  --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity))
-}
 
 .alert-dark {
   --bg-opacity: 1;
@@ -1344,11 +1321,6 @@ div.code-toolbar .toolbar button:hover {
   color: rgba(255, 255, 255, var(--text-opacity))
 }
 
-.alert-dark a {
-  --text-opacity: 1;
-  color: #a0aec0;
-  color: rgba(160, 174, 192, var(--text-opacity))
-}
 
 .alert-success {
   --bg-opacity: 1;
@@ -1362,11 +1334,6 @@ div.code-toolbar .toolbar button:hover {
   color: rgba(72, 187, 120, var(--text-opacity))
 }
 
-.alert-success a {
-  --text-opacity: 1;
-  color: #2f855a;
-  color: rgba(47, 133, 90, var(--text-opacity))
-}
 
 .alert-error {
   --bg-opacity: 1;
@@ -1380,11 +1347,6 @@ div.code-toolbar .toolbar button:hover {
   color: rgba(245, 101, 101, var(--text-opacity))
 }
 
-.alert-error a {
-  --text-opacity: 1;
-  color: #c53030;
-  color: rgba(197, 48, 48, var(--text-opacity))
-}
 
 .alert-close {
   display: flex;
