@@ -14,7 +14,14 @@ class ReviewController extends Controller
      */
     public function index()
     {
-        //
+        try {
+            $this->param['getAllReview'] = Review::all();
+            return view('seller.pages.review.page-list-review', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
     }
 
     /**

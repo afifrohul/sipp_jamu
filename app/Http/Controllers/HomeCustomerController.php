@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Review;
 use App\Models\FarmerTransaction;
 use App\Models\SellerTransaction;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class HomeCustomerController extends Controller
             $this->param['getAllProduct'] = Product::where('stock', '>', '0')->take(3)->get();
             $this->param['getNewTransactionFarmer'] = FarmerTransaction::where('status_accept', 'pending')->count();
             $this->param['getNewTransactionSeller'] = SellerTransaction::where('status_accept', 'pending')->count();
+            $this->param['getAllReview'] = Review::where('rating','>', '3')->take(3)->get();
             return view('home', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -71,6 +73,7 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getDetailProduct'] = Product::find($product->id);
+            $this->param['getDetailReview'] = Review::where('product_id', $product->id)->get();
             return view('product-detail', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

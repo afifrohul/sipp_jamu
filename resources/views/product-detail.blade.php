@@ -30,34 +30,18 @@
   <section>
     <div class="container px-32 py-10 mx-auto">
       <h3 class="text-3xl text-center font-semibold mb-6" >Ulasan Produk</h3>
-      <div class="flex w-full backdrop-filter-custom p-8 border drop-shadow-2xl rounded-lg border-gray-900 flex-wrap md:flex-nowrap mt-3"><span class="flex-shrink-0 w-12 h-12 bg-gray-400 rounded-full"></span>
+      @foreach ($getDetailReview as $item)
+          
+      <div class="flex w-full backdrop-filter-custom p-8 border drop-shadow-2xl rounded-lg border-gray-900 flex-wrap md:flex-nowrap mt-3">
+        
+        <span class="flex-shrink-0 w-12 h-12 rounded-full"><img alt="testimonial" class="" src="{{ asset('assets/upload/user/'.$item->customer->image) }}"></span>
         <div class="flex flex-col flex-grow ml-0 mt-4 md:ml-4 md:mt-0 text-gray-900">
-          <div class="flex"><span class="font-semibold">Rocky</span> <span class="ml-auto text-sm">04/27/2022</span>
+          <div class="flex"><span class="font-semibold">{{ $item->customer->name }}</span> <span class="ml-auto text-sm">{{ $item->created_at }}</span>
           </div> 
-          <p class="mt-1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore impedit ut!</p> 
+          <p class="mt-1"> {{ $item->comment }}</p> 
         </div>
       </div>
-      <div class="flex w-full backdrop-filter-custom p-8 border drop-shadow-2xl rounded-lg border-gray-900 flex-wrap md:flex-nowrap mt-3"><span class="flex-shrink-0 w-12 h-12 bg-gray-400 rounded-full"></span>
-        <div class="flex flex-col flex-grow ml-0 mt-4 md:ml-4 md:mt-0 text-gray-900">
-          <div class="flex"><span class="font-semibold">Rocky</span> <span class="ml-auto text-sm">04/27/2022</span>
-          </div> 
-          <p class="mt-1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore impedit ut!</p> 
-        </div>
-      </div>
-      <div class="flex w-full backdrop-filter-custom p-8 border drop-shadow-2xl rounded-lg border-gray-900 flex-wrap md:flex-nowrap mt-3"><span class="flex-shrink-0 w-12 h-12 bg-gray-400 rounded-full"></span>
-        <div class="flex flex-col flex-grow ml-0 mt-4 md:ml-4 md:mt-0 text-gray-900">
-          <div class="flex"><span class="font-semibold">Rocky</span> <span class="ml-auto text-sm">04/27/2022</span>
-          </div> 
-          <p class="mt-1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore impedit ut!</p> 
-        </div>
-      </div>
-      <div class="flex w-full backdrop-filter-custom p-8 border drop-shadow-2xl rounded-lg border-gray-900 flex-wrap md:flex-nowrap mt-3"><span class="flex-shrink-0 w-12 h-12 bg-gray-400 rounded-full"></span>
-        <div class="flex flex-col flex-grow ml-0 mt-4 md:ml-4 md:mt-0 text-gray-900">
-          <div class="flex"><span class="font-semibold">Rocky</span> <span class="ml-auto text-sm">04/27/2022</span>
-          </div> 
-          <p class="mt-1"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore impedit ut!</p> 
-        </div>
-      </div>
+      @endforeach
     </div>
     
   </section>

@@ -5,7 +5,7 @@
         @auth
             
         @if (\Auth::user()->roles->pluck('name')[0] == 'farmer')
-        @if ($getNewTransactionFarmer > 0)
+            @if ($getNewTransactionFarmer > 0)
             <div class="alert alert-default mb-5 flex justify-between">
                 <div class="flex gap-2 items-center">
                         <i class="fad fa-bell-on text-lg"></i>
@@ -155,30 +155,17 @@
     <div class="container px-5 py-24 mx-auto">
         <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Ulasan dan Rating</h3>
         <div class="flex flex-wrap mt-10 ">
+            @foreach ($getAllReview as $item)
+                
             <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-contain object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/3.png') }}">
-                <p class="leading-relaxed">Rasanya enak banget,,anak saya sampai nambah terus,,meningkatkan nafsu makan,,setelah mengkonsumsi jamu beras kencur ini bb anak saya cepat bertambah,,terima kasih seller .</p>
-                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">sri rahayu (jamu beras kencur 5/5)</h2>
+                    <img alt="testimonial" class="w-20 h-20 mb-8 object-contain object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/'.$item->customer->image) }}">
+                    <p class="leading-relaxed">{{ $item->comment }}</p>
+                    <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                    <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{ $item->customer->name }} ({{ $item->product->name }} {{ $item->rating }}/5)</h2>
                 </div>
             </div>
-            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-                <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-fill object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/3.png') }}">
-                <p class="leading-relaxed">Beli lagi karena rasanya enak dan menyegarkan. Seller beneran gercep dan pengemasan produk sangat rapi. Pengiriman juga cepat. Pokoknya recommended banget.</p>
-                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Tina Putri (Jamu sinom 5/5)</h2>
-                </div>
-            </div>
-            <div class="lg:w-1/3 lg:mb-0 p-4">
-                <div class="h-full text-center">
-                <img alt="testimonial" class="w-20 h-20 mb-8 object-fill object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/1.png') }}">
-                <p class="leading-relaxed">Terimakasih kak..sudah sampai paketnya..nyoba ikhtiar dengan jamu tradisional buat nyembuhin penyakit liver bapak saya..semoga cocok..kalo cocok insyaAllah repeat order lagi</p>
-                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Ibrahim (Jamu temulawak 4/5)</h2>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\HomeCustomerController;
@@ -105,6 +106,8 @@ Route::group(['middleware' => ['role:seller']], function () {
     Route::put('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::post('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::delete('/back-seller/transaction/destroy/{transaction}', [SellerTransactionController::class, 'destroy']);
+
+    Route::get('/back-seller/review', [ReviewController::class, 'index']);
 });
 
 Route::group(['middleware' => ['role:customer']], function () {
