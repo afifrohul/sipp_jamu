@@ -9,7 +9,7 @@
             <div class="alert alert-default mb-5 flex justify-between">
                 <div class="flex gap-2 items-center">
                         <i class="fad fa-bell-on text-lg"></i>
-                        <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong> Terdapat {{ $getNewTransactionFarmer }} pesanan menunggu konfirmasi. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-farmer/transaction') }}">Klik disini untuk melihat.</a> </p>
+                        <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong> Terdapat {{ $getNewTransactionFarmer }} pesanan menunggu konfirmasi. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-farmer/transaction') }}">Klik disini untuk melihat data.</a> </p>
                     </div>
                     <button class="alert-btn-close">
                         <i class="fad fa-times text-lg"></i>
