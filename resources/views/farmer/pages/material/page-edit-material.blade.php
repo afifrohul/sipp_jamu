@@ -1,6 +1,6 @@
 @extends('farmer.layouts.app')
 @section('content')
-<div>
+<div class="content">
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
             <h1 class="h6">Edit Katalog Produk</h1>

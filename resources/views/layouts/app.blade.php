@@ -50,6 +50,14 @@
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
 
+  {{-- <style>
+      .hero {
+          background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+          /* background-repeat: round */
+          background-size: cover;
+      }
+  </style> --}}
+
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{{ asset('js/app.js') }}" defer></script>

@@ -15,12 +15,12 @@
           <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
             <div class="w-full">
               <label class="text-gray-700 ml-1">Kuantitas:</label>
-              <input type="number" min="1" name="qty" class="form-input w-full block rounded mt-1 p-3 border-2 @error('qty') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Inputkan Jumlah Barang" value="{{old('qty')}}">
+              <input type="number" min="1" name="qty" class="form-input w-full block rounded mt-1 p-3 border-2 @error('qty') border-red-500 @enderror focus:outline-none focus:border-green-500" placeholder="Inputkan Jumlah Barang" value="{{old('qty')}}">
             </div>
           </div>
           <div class="flex">
             <span class="title-font font-medium text-2xl text-gray-900">Rp{{ $getDetailProduct->price }}</span>
-            <button class="flex ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">Beli Sekarang</button>
+            <button class="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Beli Sekarang</button>
           </div>
         </div>
       </div>

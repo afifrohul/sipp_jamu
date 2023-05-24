@@ -55,7 +55,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>SIPP JAMU</title>
-
+        <link rel="icon" href="{{ asset('assets/img-admin/logo.png') }}" type="image/x-icon">
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -63,6 +63,14 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
         <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
+
+        <style>
+            section {
+                background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80');
+                /* background-repeat: round */
+                background-size: cover
+            }
+        </style>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -90,14 +98,14 @@
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="email" :value="__('Email')" />
 
-                                <x-input id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5" type="email" name="email" :value="old('email', $request->email)" placeholder="alamatemail@gmail.com" readonly />
+                                <x-input id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="email" name="email" :value="old('email', $request->email)" placeholder="alamatemail@gmail.com" readonly />
                             </div>
 
                             <!-- Password -->
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password" :value="__('Password')" />
                                 
-                                <x-input id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
+                                <x-input id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
                                                 type="password"
                                                 name="password"
                                                 required autocomplete="new-password" placeholder="••••••••" />
@@ -107,12 +115,12 @@
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="password_confirmation" :value="__('Konfirmasi Password')" />
 
-                                <x-input id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-yellow-600 focus:border-yellow-600 block w-full p-2.5"
+                                <x-input id="password_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5"
                                                 type="password"
                                                 name="password_confirmation" required placeholder="••••••••"/>
                             </div>
                             <br>
-                            <button type="submit" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Setel ulang password</button>
+                            <button type="submit" class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Setel ulang password</button>
                         </form>
                     </div>
                 </div>

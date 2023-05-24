@@ -33,9 +33,10 @@
         @endif
         @endauth
     
-        <div class="relative grid w-full rounded-xl bg-gradient-to-t from-yellow-100 to-gray-100 h-96 lg:h-[32rem] place-items-center">
+        <div class="relative grid w-full rounded-t-xl bg-gradient-to-t from-green-100 to-gray-100 h-96 lg:h-[32rem] place-items-center">
+        {{-- <div class="relative grid w-full rounded-t-xl h-96 lg:h-[32rem] place-items-center hero"> --}}
             <div class="flex flex-col items-center mx-auto text-center px-6">
-                <h1 class="text-lg md:text-4xl max-w-3xl font-bold text-gray-900 font-sans">Temukan Beragam Pilihan <span class="text-yellow-500"> Jamu Herbal </span> Terbaik untuk Menjaga Kesehatanmu di <span class="text-yellow-500">Sini!</span> </h1>
+                <h1 class="text-lg md:text-4xl max-w-3xl font-bold text-gray-900 font-sans">Temukan Beragam Pilihan <span class="text-green-500"> Jamu Herbal </span> Terbaik untuk Menjaga Kesehatanmu di <span class="text-green-500">Sini!</span> </h1>
 
                 <p class="mt-6 text-sm md:text-lg leading-5 text-gray-900">Klik tombol dibawah untuk mengeksplor!</p>
 
@@ -50,7 +51,8 @@
             </div>
         </div>
 
-        <svg class="" viewBox="0 0 1440 57" fill="#fef9c3" xmlns="http://www.w3.org/2000/svg">
+        {{-- <svg class="" viewBox="0 0 1440 57" fill="#fef9c3" xmlns="http://www.w3.org/2000/svg"> --}}
+        <svg class="" viewBox="0 0 1440 57" fill="#ddfce8" xmlns="http://www.w3.org/2000/svg">
             <path d="M1440 0H0V57C720 0 1440 57 1440 57V0Z" />
         </svg>
     </section>
@@ -74,8 +76,8 @@
 
     <section class="container px-6 py-8 mx-auto lg:py-16">
         <div class="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            <div class="p-8 space-y-3 border-2 border-yellow-400 rounded-xl">
-                <span class="inline-block text-yellow-500">
+            <div class="p-8 space-y-3 border-2 border-green-400 rounded-xl hover:bg-green-100 duration-300">
+                <span class="inline-block text-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -92,8 +94,8 @@
                 </p>
             </div>
 
-            <div class="p-8 space-y-3 border-2 border-yellow-400 rounded-xl">
-                <span class="inline-block text-yellow-500">
+            <div class="p-8 space-y-3 border-2 border-green-400 rounded-xl hover:bg-green-100 duration-300">
+                <span class="inline-block text-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -108,8 +110,8 @@
                 </p>
             </div>
 
-            <div class="p-8 space-y-3 border-2 border-yellow-400 rounded-xl">
-                <span class="inline-block text-yellow-500">
+            <div class="p-8 space-y-3 border-2 border-green-400 rounded-xl hover:bg-green-100 duration-300">
+                <span class="inline-block text-green-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -161,7 +163,7 @@
                 <div class="h-full text-center">
                     <img alt="testimonial" class="w-20 h-20 mb-8 object-contain object-center rounded-full inline-block border-2 border-gray-200 " src="{{ asset('assets/upload/user/'.$item->customer->image) }}">
                     <p class="leading-relaxed">{{ $item->comment }}</p>
-                    <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                    <span class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
                     <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">{{ $item->customer->name }} ({{ $item->product->name }} {{ $item->rating }}/5)</h2>
                 </div>
             </div>
