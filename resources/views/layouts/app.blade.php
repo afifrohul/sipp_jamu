@@ -49,6 +49,7 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css-admin/style.css')}}">
   <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   {{-- <style>
       .hero {
@@ -71,6 +72,10 @@
     @include('components.footer')
   </div>
   <script src="{{asset('assets/js-admin/scripts.js')}}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+  </script>
 </body>
 </html>
 

@@ -23,6 +23,7 @@ class HomeCustomerController extends Controller
             $this->param['getNewTransactionSeller'] = SellerTransaction::where('status_accept', 'pending')->count();
             $this->param['getAllReview'] = Review::where('rating','>', '3')->take(3)->get();
             return view('home', $this->param);
+            // return view('basic-trigger', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
