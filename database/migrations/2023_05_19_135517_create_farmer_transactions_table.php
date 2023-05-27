@@ -21,6 +21,7 @@ class CreateFarmerTransactionsTable extends Migration
             $table->bigInteger('total_price');
             $table->enum('status_accept', ['accept', 'decline', 'pending', 'paid']);
             $table->text('prove_payment')->nullable();
+            $table->date('date');
             $table->timestamps();
         });
     }

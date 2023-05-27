@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecapController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\SellerRecapController;
 use App\Http\Controllers\HomeCustomerController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\SellerMaterialController;
@@ -81,6 +83,9 @@ Route::group(['middleware' => ['role:farmer']], function () {
     // Route::post('/back-farmer/transaction/update/{transaction}', [FarmerTransactionController::class, 'update']);
     // Route::delete('/back-farmer/transaction/destroy/{transaction}', [FarmerTransactionController::class, 'destroy']);
     
+    Route::get('/back-farmer/recap', [RecapController::class, 'index']);
+    
+    
 });
 
 Route::group(['middleware' => ['role:seller']], function () {
@@ -106,8 +111,9 @@ Route::group(['middleware' => ['role:seller']], function () {
     Route::put('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::post('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::delete('/back-seller/transaction/destroy/{transaction}', [SellerTransactionController::class, 'destroy']);
-
+    
     Route::get('/back-seller/review', [ReviewController::class, 'index']);
+    Route::get('/back-seller/recap', [SellerRecapController::class, 'index']);
 });
 
 Route::group(['middleware' => ['role:customer']], function () {

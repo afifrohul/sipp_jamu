@@ -28,17 +28,17 @@
             &nbsp;Monitoring Bahan Baku
         </a>
         
-        <a href="/back-farmer/transaction" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-farmer/transaction') }}" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Pesanan
         </a>
         
-        <a href="/back-farmer/history-transaction" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-farmer/history-transaction') }}" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Riwayat Pesanan
         </a>
 
-        <a href="" class="mb-3 @if (Request::segment(2) == 'summary-seller') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-farmer/recap') }}" class="mb-3 @if (Request::segment(2) == 'recap') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Reporting
         </a>

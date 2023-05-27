@@ -19,6 +19,7 @@ class TransactionFarmerSeeder extends Seeder
             'qty' => 1000,
             'total_price' => 4000,
             'status_accept' => 'pending',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -28,6 +29,7 @@ class TransactionFarmerSeeder extends Seeder
             'qty' => 1000,
             'total_price' => 5300,
             'status_accept' => 'pending',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -37,6 +39,7 @@ class TransactionFarmerSeeder extends Seeder
             'qty' => 1000,
             'total_price' => 7000,
             'status_accept' => 'pending',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -47,6 +50,7 @@ class TransactionFarmerSeeder extends Seeder
             'total_price' => 7000,
             'status_accept' => 'paid',
             'prove_payment' => 'default.png',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -57,6 +61,7 @@ class TransactionFarmerSeeder extends Seeder
             'total_price' => 7000,
             'status_accept' => 'paid',
             'prove_payment' => 'default.png',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -67,6 +72,7 @@ class TransactionFarmerSeeder extends Seeder
             'total_price' => 7000,
             'status_accept' => 'paid',
             'prove_payment' => 'default.png',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -77,6 +83,7 @@ class TransactionFarmerSeeder extends Seeder
             'total_price' => 7000,
             'status_accept' => 'paid',
             'prove_payment' => 'default.png',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -86,6 +93,7 @@ class TransactionFarmerSeeder extends Seeder
             'qty' => 6000,
             'total_price' => 42000,
             'status_accept' => 'decline',
+            'date' => '2023-02-01',
             'created_at' => now(),
             'updated_at' => now()
         ]);

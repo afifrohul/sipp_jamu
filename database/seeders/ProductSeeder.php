@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
             'image' => '10-47-10wToLIsinom-4cc13c1.webp',
             'seller_id' => 3,
             'price' => '5000',
-            'stock' => '50',
+            'stock' => '30',
             'created_at' => now(),
             'updated_at' => now()
         ]);
@@ -40,6 +40,16 @@ class ProductSeeder extends Seeder
             'seller_id' => 3,
             'price' => '56000',
             'stock' => '33',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        $product = Product::create([
+            'name' => 'Jamu Kunyit',
+            'description' => 'Dibuat dari kunyit, tumbuhan herbal yang telah lama digunakan dalam pengobatan tradisional, produk ini merupakan pilihan yang baik untuk menjaga keseimbangan tubuh secara alami. Setiap tegukan Jamu Kunyit menawarkan rasa hangat dan sedikit pahit yang khas. Kunyit, dengan senyawa aktif utamanya yaitu kurkumin, memiliki sifat antiinflamasi dan antioksidan yang dapat membantu meredakan peradangan, meningkatkan sistem kekebalan tubuh, dan melindungi tubuh dari kerusakan radikal bebas.',
+            'image' => 'kunyit.jfif',
+            'seller_id' => 3,
+            'price' => '30000',
+            'stock' => '23',
             'created_at' => now(),
             'updated_at' => now()
         ]);

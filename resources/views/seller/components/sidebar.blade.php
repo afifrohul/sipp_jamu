@@ -22,19 +22,24 @@
             &nbsp;Stok Bahan Baku
         </a>
 
-        <a href="/back-seller/transaction" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-seller/transaction') }}" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Pesanan
         </a>
         
-        <a href="/back-seller/history-transaction" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-seller/history-transaction') }}" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Riwayat Pesanan
         </a>
         
-        <a href="/back-seller/review" class="mb-3 @if (Request::segment(2) == 'review') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        <a href="{{ url('back-seller/review') }}" class="mb-3 @if (Request::segment(2) == 'review') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Ulasan
+        </a>
+        
+        <a href="{{ url('back-seller/recap') }}" class="mb-3 @if (Request::segment(2) == 'recap') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+            <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
+            &nbsp;Rekapan Penjualan
         </a>
     </div>
 </div>
