@@ -29,6 +29,7 @@ var getProductStock = {{ $getProductStock }};
       name: "Pendapatan (Rp)",
       data: [{{ $getTransactionJan }}, {{ $getTransactionFeb }}, {{ $getTransactionMar }}, {{ $getTransactionApr }}, {{ $getTransactionMei }}, {{ $getTransactionJun }}, {{ $getTransactionJul }}, {{ $getTransactionAug }}, {{ $getTransactionSep }}, {{ $getTransactionOkt }}, {{ $getTransactionNov }}, {{ $getTransactionDes }}]
     }],
+    colors: ['#00E396'],
     chart: {
     height: 250,
     type: 'area',

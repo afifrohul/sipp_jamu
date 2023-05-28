@@ -33,7 +33,7 @@
         @endif
         @endauth
     
-        <div class="relative grid w-full rounded-t-xl bg-gradient-to-t from-green-100 to-gray-100 h-96 lg:h-[32rem] place-items-center">
+        <div class="relative grid w-full rounded-t-xl bg-gradient-to-t from-green-300 to-gray-100 h-96 lg:h-[32rem] place-items-center">
         {{-- <div class="relative grid w-full rounded-t-xl h-96 lg:h-[32rem] place-items-center hero"> --}}
             <div class="flex flex-col items-center mx-auto text-center px-6">
                 <h1 class="text-lg md:text-4xl max-w-3xl font-bold text-gray-900 font-sans">Temukan Beragam Pilihan <span class="text-green-500"> Jamu Herbal </span> Terbaik untuk Menjaga Kesehatanmu di <span class="text-green-500">Sini!</span> </h1>
@@ -52,7 +52,7 @@
         </div>
 
         {{-- <svg class="" viewBox="0 0 1440 57" fill="#fef9c3" xmlns="http://www.w3.org/2000/svg"> --}}
-        <svg class="" viewBox="0 0 1440 57" fill="#ddfce8" xmlns="http://www.w3.org/2000/svg">
+        <svg class="" viewBox="0 0 1440 57" fill="#87efad" xmlns="http://www.w3.org/2000/svg">
             <path d="M1440 0H0V57C720 0 1440 57 1440 57V0Z" />
         </svg>
     </section>

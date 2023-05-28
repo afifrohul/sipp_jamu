@@ -13,7 +13,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Katalog Produk: </label>
-                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{old('name')}}">
+                    <input type="text" name="name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Kencur" value="{{old('name')}}">
                     @error('name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
@@ -22,7 +22,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Deskripsi Katalog Produk: </label>
-                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan...">{{ old('description') }}</textarea>
+                    <textarea type="text" name="description" class="form-input w-full block rounded mt-1 p-3 border-2 @error('description') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Kencur merupakan bahan baku untuk pembuatan...">{{ old('description') }}</textarea>
                     @error('description')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}

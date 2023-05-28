@@ -59,7 +59,10 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">
+                                    @if ($item->status_accept == 'paid')
+                                        
                                     <img class="h-16 object-cover m-auto" src="{{asset('assets/upload/payment')}}/{{$item->prove_payment}}">
+                                    @endif
                                 </div>
                             </td>
                             

@@ -2,19 +2,19 @@
 
 @section('content')
 <div id="chartStock" class="bg-white">
-  <h3 class="text-center font-semibold text-xl pt-2">Stok Produk Seller</h3>
+  {{-- <h3 class="text-center font-semibold text-xl pt-2">Stok Produk Seller</h3> --}}
 </div>
 
 <div id="chartIncome" class="bg-white mt-4">
-  <h3 class="text-center font-semibold text-xl pt-2">Pendapatan Seller per Bulan</h3>
+  {{-- <h3 class="text-center font-semibold text-xl pt-2">Pendapatan Seller per Bulan</h3> --}}
 </div>
 
 <div class="grid grid-cols-2 gap-4 " >
   <div id="chartProduct" class="bg-white mt-4">
-    <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller</h3>
+    {{-- <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller</h3> --}}
   </div>
   <div id="chartProductThisMonth" class="bg-white mt-4">
-    <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller Bulan Ini</h3>
+    {{-- <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller Bulan Ini</h3> --}}
   </div>
 
 </div>
@@ -33,9 +33,11 @@ var optionsStock = {
       name: "Stok",
       data: getProductStock
   }],
+    colors: ['#00E396'],
     chart: {
-    type: 'bar',
-    height: 200
+      fontFamily:'Ubuntu',
+      type: 'bar',
+      height: 200
   },
   plotOptions: {
     bar: {
@@ -45,6 +47,10 @@ var optionsStock = {
   },
   dataLabels: {
     enabled: false
+  },
+  title: {
+    text : "Stok Produk Seller",
+    align: 'center'
   },
   xaxis: {
     categories: getProductName
@@ -59,7 +65,9 @@ var optionsStock = {
       name: "Pendapatan (Rp)",
       data: [{{ $getTransactionJan }}, {{ $getTransactionFeb }}, {{ $getTransactionMar }}, {{ $getTransactionApr }}, {{ $getTransactionMei }}, {{ $getTransactionJun }}, {{ $getTransactionJul }}, {{ $getTransactionAug }}, {{ $getTransactionSep }}, {{ $getTransactionOkt }}, {{ $getTransactionNov }}, {{ $getTransactionDes }}]
     }],
+    colors: ['#00E396'],
     chart: {
+    fontFamily:'Ubuntu',
     height: 250,
     type: 'area',
     zoom: {
@@ -87,6 +95,10 @@ var optionsStock = {
       text: "Bulan"
     }
   },
+  title: {
+    text : "Pendapatan Seller per Bulan",
+    align: 'center'
+  },
   yaxis: {
     title: {
       text: "Pendapatan (Rp)"
@@ -102,15 +114,20 @@ var optionsStock = {
   var optionsProduct = {
     series: totalQtyByProduct,
     chart: {
+    fontFamily:'Ubuntu',
     // width: 380,
     type: 'pie',
+  },
+  title: {
+    text : "Rekapan Penjualan Produk Seller",
+    align: 'center'
   },
   labels: getProductName,
   responsive: [{
     breakpoint: 480,
     options: {
       chart: {
-        width: 200
+        // width: 200
       },
       legend: {
         position: 'bottom'
@@ -127,15 +144,20 @@ var optionsStock = {
   var optionsProductThisMonth = {
     series: totalQtyByProductThisMonth,
     chart: {
+    fontFamily:'Ubuntu',
     // width: 380,
     type: 'pie',
+  },
+  title: {
+    text : "Rekapan Penjualan Produk Seller Bulan Ini",
+    align: 'center'
   },
   labels: getProductName,
   responsive: [{
     breakpoint: 480,
     options: {
       chart: {
-        width: 200
+        // width: 200
       },
       legend: {
         position: 'bottom'
