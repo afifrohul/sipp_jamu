@@ -19,7 +19,7 @@
                 @csrf
                 <div>
                     <label class="text-gray-700 ml-1">Nama Produk: </label>
-                    <textarea type="text" name="product_id" class="form-input w-full block rounded mt-1 p-3 border-2 @error('product_id') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." readonly >{{ $getDetailTransaction->product->name }}</textarea>
+                    <input type="text" name="product_id" class="form-input w-full block rounded mt-1 p-3 border-2 @error('product_id') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{$getDetailTransaction->product->name}}" readonly>
                     @error('product_id')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}

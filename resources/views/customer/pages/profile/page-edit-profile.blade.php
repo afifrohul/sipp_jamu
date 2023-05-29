@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Nama Lengkap: </label>
-                    <textarea type="text" name="full_name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('full_name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras kencur merupakan bahan baku untuk pembuatan..." >{{ old('full_name',$getDetailUser->full_name)}}</textarea>
+                    <input type="text" name="full_name" class="form-input w-full block rounded mt-1 p-3 border-2 @error('full_name') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Beras Kencur" value="{{ old('full_name',$getDetailUser->full_name)}}">
                     @error('full_name')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
