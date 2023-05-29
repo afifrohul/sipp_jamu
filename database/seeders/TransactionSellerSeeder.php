@@ -25,9 +25,30 @@ class TransactionSellerSeeder extends Seeder
         ]);
         $transactionProduct = SellerTransaction::create([
             'user_id' => 4,
+            'product_id' => 1,
+            'qty' => 2,
+            'total_price' => 4000,
+            'status_accept' => 'cancel',
+            'date' => '2023-01-01',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        $transactionProduct = SellerTransaction::create([
+            'user_id' => 4,
             'product_id' => 2,
             'qty' => 2,
             'total_price' => 5300,
+            'status_accept' => 'accept',
+            'prove_payment' => 'default.png',
+            'date' => '2023-01-01',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        $transactionProduct = SellerTransaction::create([
+            'user_id' => 4,
+            'product_id' => 2,
+            'qty' => 2,
+            'total_price' => 5800,
             'status_accept' => 'accept',
             'date' => '2023-01-01',
             'created_at' => now(),
@@ -39,6 +60,7 @@ class TransactionSellerSeeder extends Seeder
             'qty' => 2,
             'total_price' => 10000,
             'status_accept' => 'paid',
+            'prove_payment' => 'default.png',
             'date' => '2023-01-01',
             'created_at' => now(),
             'updated_at' => now()
@@ -49,6 +71,7 @@ class TransactionSellerSeeder extends Seeder
             'qty' => 2,
             'total_price' => 12000,
             'status_accept' => 'paid',
+            'prove_payment' => 'default.png',
             'date' => '2023-01-01',
             'created_at' => now(),
             'updated_at' => now()

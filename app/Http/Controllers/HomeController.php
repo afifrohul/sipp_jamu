@@ -21,7 +21,7 @@ class HomeController extends Controller
         } elseif ($roleUser == 'seller') {
             return redirect('/back-seller/dashboard');
         } elseif ($roleUser == 'customer') {
-            return redirect('/');
+            return redirect('/back-customer/dashboard');
         } else {
             return redirect('/logout');
         }

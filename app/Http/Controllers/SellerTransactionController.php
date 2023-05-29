@@ -27,7 +27,7 @@ class SellerTransactionController extends Controller
     public function history()
     {
         try {
-            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'paid')->orWhere('status_accept', 'decline')->get();
             return view('seller.pages.transaction.page-list-history-transaction', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -35,7 +35,30 @@ class SellerTransactionController extends Controller
             return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
         }
     }
+    
+    public function indexCustomer()
+    {
+        try {
+            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            return view('customer.pages.transaction.page-list-transaction', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
+    }
 
+    public function historyCustomer()
+    {
+        try {
+            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'paid')->orWhere('status_accept', 'decline')->orWhere('status_accept', 'cancel')->get();
+            return view('customer.pages.transaction.page-list-history-transaction', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -68,7 +91,7 @@ class SellerTransactionController extends Controller
         //
     }
 
-    public function edit(SellerTransaction $transaction)
+    public function confirm(SellerTransaction $transaction)
     {
         try {
             $this->param['getDetailTransaction'] = SellerTransaction::find($transaction->id);
@@ -79,8 +102,42 @@ class SellerTransactionController extends Controller
             return redirect()->back()->withError($e->getMessage());
         }
     }
-
+    
+    
     public function update(Request $request, SellerTransaction $transaction)
+    {
+        try {
+            $date = date('H-i-s');
+            $random = \Str::random(5);
+            $transaction = SellerTransaction::find($transaction->id);
+            $transaction->status_accept = $request->status_accept;
+            if ($request->file('image')) {
+                $request->file('image')->move('assets/upload/payment', $date.$random.$request->file('image')->getClientOriginalName());
+                $transaction->prove_payment = $date.$random.$request->file('image')->getClientOriginalName();
+            } 
+            $transaction->save();
+            return redirect('/back-customer/transaction')->withStatus('Berhasil memperbarui data.');
+        } catch(\Throwable $e){
+            return redirect('/back-customer/transaction')->withError($e->getMessage());
+        } catch(\Illuminate\Database\QueryException $e){
+            return redirect('/back-customer/transaction')->withError($e->getMessage());
+        }
+        
+    }
+    
+    public function edit(SellerTransaction $transaction)
+    {
+        try {
+            $this->param['getDetailTransaction'] = SellerTransaction::find($transaction->id);
+            return view('customer.pages.transaction.page-edit-transaction', $this->param);
+        } catch(\Throwable $e){
+            return redirect()->back()->withError($e->getMessage());
+        } catch(\Illuminate\Database\QueryException $e){
+            return redirect()->back()->withError($e->getMessage());
+        }
+    }
+    
+    public function updateCustomer(Request $request, SellerTransaction $transaction)
     {
         try {
             $transaction = SellerTransaction::find($transaction->id);

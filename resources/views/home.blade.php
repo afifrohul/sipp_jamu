@@ -31,6 +31,19 @@
             </div>
             @endif
         @endif
+        @if (\Auth::user()->roles->pluck('name')[0] == 'customer')
+            @if ($getTransactionAccept > 0)
+            <div class="alert alert-default mb-5 flex justify-between">
+                <div class="flex gap-2 items-center">
+                    <i class="fad fa-bell-on text-lg"></i>
+                    <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong> Terdapat {{ $getTransactionAccept }} pesanan yang diterima. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-customer/transaction') }}">Klik disini untuk melakukan transaksi.</a> </p>
+                </div>
+                <button class="alert-btn-close">
+                    <i class="fad fa-times text-lg"></i>
+                </button>
+            </div>
+            @endif
+        @endif
         @endauth
     
         <div class="relative grid w-full rounded-t-xl bg-gradient-to-t from-green-300 to-gray-100 h-96 lg:h-[32rem] place-items-center">

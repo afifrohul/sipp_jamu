@@ -16,9 +16,9 @@
   @yield('extraCSS')
 </head>
 <body class="bg-gray-100">
-    @include('seller.components.navbar')
+    @include('customer.components.navbar')
     <div class="h-screen flex flex-row flex-wrap">
-        @include('seller.components.sidebar')
+        @include('customer.components.sidebar')
         <div class="bg-gray-100 flex-1 p-6 md:mt-16"> 
             <div>
                 @if (session('status'))

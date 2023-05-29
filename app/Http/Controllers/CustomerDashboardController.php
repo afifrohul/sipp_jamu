@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\SellerTransaction;
+use App\Models\Review;
 
 class CustomerDashboardController extends Controller
 {
@@ -11,11 +13,13 @@ class CustomerDashboardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    private $param;
     public function index()
     {
         try {
-            
-            return view('farmer.pages.dashboard.dashboard',`$this->param`);
+            $this->param['getCountTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->count();
+            $this->param['getCountReview'] = Review::where('customer_id', \Auth::user()->id)->count();
+            return view('customer.pages.dashboard.dashboard',$this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {

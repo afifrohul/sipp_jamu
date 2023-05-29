@@ -18,10 +18,10 @@
             &nbsp;Katalog Produk
         </a>
         
-        <a href="{{url('back-farmer/monitor-product')}}" class="mb-3 @if (Request::segment(2) == 'monitor-product') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
+        {{-- <a href="{{url('back-farmer/monitor-product')}}" class="mb-3 @if (Request::segment(2) == 'monitor-product') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
             &nbsp;Monitoring Produk
-        </a>
+        </a> --}}
         
         <a href="{{url('back-farmer/monitor-material')}}" class="mb-3 @if (Request::segment(2) == 'monitor-material') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>

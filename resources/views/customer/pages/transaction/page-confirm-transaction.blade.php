@@ -48,11 +48,11 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Status Pesanan: </label>
-                    <select name="status_accept" class="form-input mt-1 p-3 border-2 @error('tag') border-red-500 @enderror focus:outline-none focus:border-teal-500 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0" readonly>
-                        <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') selected @endif>Pending</option>
-                        <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
-                        <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') selected @endif>Tolak</option>
-                        <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
+                    <select name="status_accept" class="form-input mt-1 p-3 border-2 @error('tag') border-red-500 @enderror focus:outline-none focus:border-teal-500 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0">
+                        <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') seleccted @endif>Pending</option>
+                        <option value="accept"  @if ($getDetailTransaction->status_accept == 'acceot') seleccted @endif>Terima</option>
+                        <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') seleccted @endif>Tolak</option>
+                        <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') seleccted @endif>Sudah Bayar</option>
                     </select>
                 </div>
                 <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center">

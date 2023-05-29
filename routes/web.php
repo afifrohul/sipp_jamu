@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RecapController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\SellerRecapController;
 use App\Http\Controllers\HomeCustomerController;
@@ -68,8 +69,8 @@ Route::group(['middleware' => ['role:farmer']], function () {
     Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
     Route::delete('/back-farmer/material/destroy/{material}', [MaterialController::class, 'destroy']);
 
-    Route::get('/back-farmer/monitor-product', [FarmerMonitoringController::class, 'monitor_product']);
-    Route::get('/back-farmer/monitor-material', [FarmerMonitoringController::class, 'monitor_material']);
+    // Route::get('/back-farmer/monitor-product', [FarmerMonitoringController::class, 'monitor_product']);
+    // Route::get('/back-farmer/monitor-material', [FarmerMonitoringController::class, 'monitor_material']);
     // Route::post('/back-farmer/material/new', [MaterialController::class, 'store']);
     // Route::post('/back-farmer/material/edit/{material}', [MaterialController::class, 'edit']);
     // Route::put('/back-farmer/material/update/{material}', [MaterialController::class, 'update']);
@@ -107,17 +108,32 @@ Route::group(['middleware' => ['role:seller']], function () {
     Route::get('/back-seller/history-transaction', [SellerTransactionController::class, 'history']);
     Route::get('/back-seller/transaction', [SellerTransactionController::class, 'index']);
     // Route::post('/back-seller/transaction/new', [SellerTransactionController::class, 'store']);
-    Route::post('/back-seller/transaction/edit/{transaction}', [SellerTransactionController::class, 'edit']);
-    Route::put('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
+    Route::post('/back-seller/transaction/edit/{transaction}', [SellerTransactionController::class, 'confirm']);
+    Route::put('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'updateSeller']);
     // Route::post('/back-seller/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::delete('/back-seller/transaction/destroy/{transaction}', [SellerTransactionController::class, 'destroy']);
     
-    Route::get('/back-seller/review', [ReviewController::class, 'index']);
+    Route::get('/back-seller/review', [ReviewController::class, 'indexSeller']);
     Route::get('/back-seller/recap', [SellerRecapController::class, 'index']);
 });
 
+
 Route::group(['middleware' => ['role:customer']], function () {
     Route::get('/back-customer/dashboard', [CustomerDashboardController::class, 'index']);
+    
+    Route::get('/back-customer/profile', [ProfileController::class, 'index']);
+    Route::get('/back-customer/profile/edit/{user}', [ProfileController::class, 'edit']);
+    Route::put('/back-customer/profile/update/{user}', [ProfileController::class, 'update']);
+
+    Route::get('/back-customer/history-transaction', [SellerTransactionController::class, 'historyCustomer']);
+    Route::get('/back-customer/transaction', [SellerTransactionController::class, 'indexCustomer']);
+    // Route::post('/back-customer/transaction/new', [SellerTransactionController::class, 'store']);
+    Route::post('/back-customer/transaction/edit/{transaction}', [SellerTransactionController::class, 'edit']);
+    Route::put('/back-customer/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
+    // Route::post('/back-customer/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
+    // Route::delete('/back-customer/transaction/destroy/{transaction}', [SellerTransactionController::class, 'destroy']);
+    Route::get('/back-customer/review', [ReviewController::class, 'indexCustomer']);
+    
 });
 
 require __DIR__.'/auth.php';

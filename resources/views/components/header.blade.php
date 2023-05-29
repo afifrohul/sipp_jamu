@@ -38,7 +38,7 @@
                       <i class="fad fa-bars text-xs mr-1"></i>Dashboard
                   </x-dropdown-link>
                   @if ((Auth::user()->roles->pluck('name')[0]) == 'customer')
-                  <x-dropdown-link href="{{ url('/') }}">Kelola Akun</x-dropdown-link>
+                  <x-dropdown-link href="{{ url('/back-customer/profile') }}"><i class="fad fa-address-card text-xs mr-1"></i>Kelola Akun</x-dropdown-link>
                   @endif
                   <form method="POST" action="{{ route('logout') }}">
                       @csrf

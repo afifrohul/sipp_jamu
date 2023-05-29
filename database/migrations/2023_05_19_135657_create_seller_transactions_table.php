@@ -19,7 +19,7 @@ class CreateSellerTransactionsTable extends Migration
             $table->foreignId('product_id')->nullable();
             $table->integer('qty');
             $table->bigInteger('total_price');
-            $table->enum('status_accept', ['accept', 'decline', 'pending', 'paid']);
+            $table->enum('status_accept', ['accept', 'decline', 'pending', 'paid', 'cancel']);
             $table->text('prove_payment')->nullable();
             $table->date('date');
             $table->timestamps();

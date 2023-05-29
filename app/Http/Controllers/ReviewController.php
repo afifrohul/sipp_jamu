@@ -12,11 +12,23 @@ class ReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexSeller()
     {
         try {
             $this->param['getAllReview'] = Review::all();
             return view('seller.pages.review.page-list-review', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
+    }
+    
+    public function indexCustomer()
+    {
+        try {
+            $this->param['getAllReview'] = Review::where('customer_id', \Auth::user()->id)->get();
+            return view('customer.pages.review.page-list-review', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         } catch (\Illuminate\Database\QueryException $e) {
