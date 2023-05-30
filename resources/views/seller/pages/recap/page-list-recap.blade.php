@@ -2,19 +2,29 @@
 
 @section('content')
 
-<div id="chartIncome" class="bg-white">
-  <h3 class="text-center font-semibold text-xl pt-2">Pendapatan per Bulan</h3>
+@if ($getAllTransaction == 0)
+    
+<div class="w-full bg-white p-4 mt-2">
+  <h1 class="text-xl text-center font-semibold">Tidak ada data tersedia</h1>
+</div>
+@endif
+
+@if ($getAllTransaction != 0)
+    
+<div id="chartIncome" class="bg-white mt-4">
+  {{-- <h3 class="text-center font-semibold text-xl pt-2">Pendapatan Seller per Bulan</h3> --}}
 </div>
 
 <div class="grid grid-cols-2 gap-4 " >
   <div id="chartProduct" class="bg-white mt-4">
-    <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk</h3>
+    {{-- <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller</h3> --}}
   </div>
   <div id="chartProductThisMonth" class="bg-white mt-4">
-    <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Bulan Ini</h3>
+    {{-- <h3 class="text-center font-semibold text-xl pt-2">Rekapan Penjualan Produk Seller Bulan Ini</h3> --}}
   </div>
-
+  
 </div>
+@endif
 
 @endsection
 
@@ -58,6 +68,10 @@ var getProductStock = {{ $getProductStock }};
       text: "Bulan"
     }
   },
+  title: {
+    text : "Pendapatan Seller per Bulan",
+    align: 'center'
+  },
   yaxis: {
     title: {
       text: "Pendapatan (Rp)"
@@ -75,6 +89,10 @@ var getProductStock = {{ $getProductStock }};
     chart: {
     // width: 380,
     type: 'pie',
+  },
+  title: {
+    text : "Rekapan Penjualan Produk Seller",
+    align: 'center'
   },
   labels: getProductName,
   responsive: [{
@@ -100,6 +118,10 @@ var getProductStock = {{ $getProductStock }};
     chart: {
     // width: 380,
     type: 'pie',
+  },
+  title: {
+    text : "Rekapan Penjualan Produk Seller Bulan Ini",
+    align: 'center'
   },
   labels: getProductName,
   responsive: [{

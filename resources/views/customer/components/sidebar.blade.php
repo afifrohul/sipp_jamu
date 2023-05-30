@@ -15,11 +15,11 @@
         <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">Master Data</p>
         <a href="{{url('back-customer/transaction')}}" class="mb-3 @if (Request::segment(2) == 'transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
-            &nbsp;Pesanan
+            &nbsp;Transaksi
         </a>
         <a href="{{ url('back-customer/history-transaction') }}" class="mb-3 @if (Request::segment(2) == 'history-transaction') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>
-            &nbsp;Riwayat Pesanan
+            &nbsp;Riwayat Transaksi
         </a>
         <a href="{{ url('back-customer/review') }}" class="mb-3 @if (Request::segment(2) == 'review') text-yellow-600 @endif capitalize font-medium text-sm hover:text-yellow-600 transition ease-in-out duration-500">
             <i class="fad fa-bullseye-arrow text-xs mr-2"></i>

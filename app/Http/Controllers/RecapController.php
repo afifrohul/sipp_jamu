@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\SellerTransaction;
 use App\Models\Product;
+use App\Models\Material;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,10 +21,12 @@ class RecapController extends Controller
     public function index()
     {
         try {
-            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->count();
 
             $this->param['getProductName'] = Product::pluck('name');
+            $this->param['getMaterialName'] = Material::where('user_id', '!=', \Auth::user()->id)->pluck('name');
             $this->param['getProductStock'] = Product::pluck('stock');
+            $this->param['getMaterialStock'] = Material::where('user_id', '!=', \Auth::user()->id)->pluck('stock');
 
             $this->param['getTransactionJan'] = SellerTransaction::where('status_accept', 'paid')->whereMonth('date', '01')->sum('total_price');
             $this->param['getTransactionFeb'] = SellerTransaction::where('status_accept', 'paid')->whereMonth('date', '02')->sum('total_price');

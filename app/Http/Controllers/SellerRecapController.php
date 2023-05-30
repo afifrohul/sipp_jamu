@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\SellerTransaction;
 use App\Models\Product;
+use App\Models\Material;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +20,7 @@ class SellerRecapController extends Controller
     public function index()
     {
         try {
-            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get();
+            $this->param['getAllTransaction'] = SellerTransaction::where('status_accept', 'accept')->orWhere('status_accept', 'pending')->count();
 
             $this->param['getProductName'] = Product::pluck('name');
             $this->param['getProductStock'] = Product::pluck('stock');
