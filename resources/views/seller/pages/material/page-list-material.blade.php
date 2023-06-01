@@ -7,6 +7,14 @@
     <div class="card mb-8">
         <div class="card-header flex flex-row justify-between">
             <h1 class="h6">Tambah Bahan Baku</h1>
+            <button type="submit" class="bg-teal-500 rounded hover:bg-teal-600">
+                <a href="{{ url('back-seller/material/add') }}">
+
+                    <div class="h-10 flex items-center px-2">
+                        <p class="text-xs font-semibold text-white"><i class="fa fa-plus text-white mr-2"></i>Tambah Bahan Baku dari Petani</p>
+                    </div>
+                </a>
+            </button>
         </div>
         <div class="card-body">
             <form method="POST" action="{{url('/back-seller/material/new')}}" enctype="multipart/form-data" novalidate>
@@ -129,6 +137,58 @@
                                     <button type="submit" class="bg-red-600 h-10 w-10 rounded hover:bg-red-700" onclick="return confirm('Hapus Data ?')"><i class="fa fa-trash text-white"></i></button>
                                 </form> --}}
                             </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header flex flex-row justify-between">
+            <h1 class="h6">List Pesanan Bahan Baku dari Petani</h1>
+        </div>
+        <div class="card-body">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg p-3">
+                <table class="min-w-full divide-y divide-gray-200" id="dataTable">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                No
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Nama Bahan Baku
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Kuantitas (gram)
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Total Harga
+                            </th>
+                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Status
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        @foreach ($getAllOrder as $item)
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <div class="text-sm text-gray-900">{{$loop->iteration}}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <div class="text-sm text-gray-900">{{$item->material->name}}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <div class="text-sm text-gray-900">{{ $item->qty }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <div class="text-sm text-gray-900">{{$item->total_price}}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                                <div class="text-sm text-gray-900">{{$item->status_accept}}</div>
+                            </td>
+                            
                         </tr>
                         @endforeach
                     </tbody>

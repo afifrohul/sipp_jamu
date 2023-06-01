@@ -49,10 +49,16 @@
                 <div>
                     <label class="text-gray-700 ml-1">Status Pesanan: </label>
                     <select name="status_accept" class="form-input mt-1 p-3 border-2 @error('tag') border-red-500 @enderror focus:outline-none focus:border-teal-500 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0" readonly>
+                    @if ($getDetailTransaction->status_accep == 'pending')
                         <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') selected @endif>Pending</option>
                         <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
                         <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') selected @endif>Tolak</option>
-                        <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
+                    @endif
+                    @if ($getDetailTransaction->status_accep == 'accept')
+                        
+                    <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
+                    <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
+                    @endif
                     </select>
                 </div>
                 <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center">
@@ -61,7 +67,7 @@
                         <div class='flex items-center justify-center w-full mt-2'>
                             <label class='flex flex-col border-4 border-dashed w-full h-auto border-yellow-500 group bg-gray-300'>
                                     <div class='flex flex-col items-center justify-center py-1'>
-                                        <img id="preview" src="{{asset('assets/upload/material')}}/{{$getDetailTransaction->image}}" alt="preview" class="object-cover h-32">
+                                        <img id="preview" src="{{asset('assets/upload/payment')}}/{{$getDetailTransaction->prove_payment}}" alt="preview" class="object-cover h-32">
                                     </div>
                             </label>
                         </div>

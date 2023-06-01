@@ -69,8 +69,9 @@
   <div>
     @include('components.header')
       @yield('content')
-    @include('components.footer')
-  </div>
+      @include('components.footer')
+    </div>
+    @yield('extraJS')
   <script src="{{asset('assets/js-admin/scripts.js')}}"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

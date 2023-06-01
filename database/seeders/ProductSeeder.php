@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
             'image' => '10-47-10wToLIsinom-4cc13c1.webp',
             'seller_id' => 3,
             'price' => '5000',
-            'stock' => '30',
+            'stock' => '100',
             'created_at' => now(),
             'updated_at' => now()
         ]);

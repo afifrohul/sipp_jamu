@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Material;
+use App\Models\FarmerTransaction;
 
 class SellerMaterialController extends Controller
 {
@@ -17,6 +18,7 @@ class SellerMaterialController extends Controller
     {
         try {
             $this->param['getAllMaterial'] = Material::where('user_id', auth()->user()->id)->get();
+            $this->param['getAllOrder'] = FarmerTransaction::where('user_id', auth()->user()->id)->get();
             return view('seller.pages.material.page-list-material', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -32,7 +34,14 @@ class SellerMaterialController extends Controller
      */
     public function create()
     {
-        //
+        try {
+            $this->param['getAllMaterial'] = Material::where('user_id', 2)->get();
+            return view('seller.pages.material.page-add-material', $this->param);
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
     }
 
     /**

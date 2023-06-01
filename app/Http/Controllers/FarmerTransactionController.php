@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\FarmerTransaction;
+use App\Models\Material;
 class FarmerTransactionController extends Controller
 {
     /**
@@ -54,7 +55,39 @@ class FarmerTransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,
+        [
+            'qty' => 'required|integer|min:1',
+        ],
+        [
+            'required' => 'Tolong isi kolom ini. Data harus diisi',
+            'min' => 'Kuantitas harus lebih besar dari 0'
+        ],
+        [
+            'qty' => 'Kuantitas'
+        ]);
+
+        
+        try {
+            
+            $materialPrice = Material::find($request->material_id)->price;
+
+            $transaction = new FarmerTransaction();
+            $transaction->user_id = auth()->user()->id;
+            $transaction->material_id = $request->material_id;
+            $transaction->qty = $request->qty;
+            $transaction->total_price = $request->qty/1000 * $materialPrice;
+            $transaction->status_accept = 'pending';
+            $transaction->date = now();
+            $transaction->save();
+
+            return redirect('/back-seller/material')->withStatus('Berhasil menambah pesanan bahan baku.');
+
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
     }
 
     /**

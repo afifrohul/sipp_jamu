@@ -31,9 +31,9 @@
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Status
                             </th>
-                            <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            {{-- <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Bukti Pembayaran
-                            </th>
+                            </th> --}}
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Konfirmasi Pesanan
                             </th>
@@ -60,7 +60,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">{{$item->status_accept}}</div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-center">
+                            {{-- <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="text-sm text-gray-900">
                                     @if ($item->status_accept == 'accept' || $item->status_accept == 'paid')
                                         @if ($item->prove_payment != null)
@@ -68,7 +68,7 @@
                                         @endif
                                     @endif
                                 </div>
-                            </td>
+                            </td> --}}
                             
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-center">
                                 <form action="{{url('/back-farmer/transaction/edit',$item->id)}}" method="POST" class="inline">

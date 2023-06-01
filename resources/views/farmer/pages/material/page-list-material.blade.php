@@ -30,7 +30,7 @@
                     @enderror
                 </div>
                 <div>
-                    <label class="text-gray-700 ml-1">Harga (Rp): </label>
+                    <label class="text-gray-700 ml-1">Harga (Rp/kg): </label>
                     <input type="number" name="price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('price')}}">
                     @error('price')
                     <span class="pl-1 text-xs text-red-600 text-bold">
@@ -96,7 +96,7 @@
                                 Deskripsi Katalog Produk
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Harga (per gram)
+                                Harga (per kilogram)
                             </th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Stok Tersedia (gram)

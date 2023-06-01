@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Material;
 use App\Models\Review;
 use App\Models\FarmerTransaction;
 use App\Models\SellerTransaction;
@@ -75,6 +76,7 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getDetailProduct'] = Product::find($product->id);
+            $this->param['getDetailProductPrice'] = Product::find($product->id)->price;
             $this->param['getDetailReview'] = Review::where('product_id', $product->id)->get()->reverse();
             return view('product-detail', $this->param);
         } catch (\Exception $e) {

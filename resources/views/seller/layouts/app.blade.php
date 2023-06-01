@@ -56,6 +56,16 @@
                 }
             );
         });
+        var material = document.getElementById("material")
+        var text = material.options[1].innerHTML.split(' ')
+        var price = parseInt( text[text.length - 1])
+        
+        var qty = document.getElementById('qty')
+
+        var total = price * parseInt(qty.value)/1000
+
+
+</script>
     </script>
 </body>
 </html>
