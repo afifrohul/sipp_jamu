@@ -133,6 +133,7 @@ Route::group(['middleware' => ['role:customer']], function () {
     // Route::post('/back-customer/transaction/update/{transaction}', [SellerTransactionController::class, 'update']);
     // Route::delete('/back-customer/transaction/destroy/{transaction}', [SellerTransactionController::class, 'destroy']);
     Route::get('/back-customer/review', [ReviewController::class, 'indexCustomer']);
+    Route::post('/back-customer/review/new/{product}', [ReviewController::class, 'store']);
     
 });
 

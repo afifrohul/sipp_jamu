@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Review;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ReviewController extends Controller
@@ -49,12 +50,42 @@ class ReviewController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param  \App\Models\Product  $Product
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Product $product)
     {
-        //
+        $this->validate($request,
+        [
+            'comment' => 'required',
+            'rating' => 'required|numeric|min:1|max:5'
+        ],
+        [
+            'required' => 'Tolong isi kolom ini. Data harus diisi',
+            'max' => 'Nilai maksimal adalah 5'
+        ],
+        [
+            'comment' => 'Jumlah Produk',
+            'rating' => 'Rating Produk'
+        ]);
+
+        try {
+            $product = \Request::segment(4);
+            $review = new Review();
+            $review->customer_id = auth()->user()->id;
+            $review->product_id = $product;
+            $review->comment = $request->comment;
+            $review->rating = $request->rating;
+            $review->save();
+
+            return redirect('/product-detail/'.\Request::segment(4))->withStatus('Berhasil menambah ulasan produk.');
+
+        } catch (\Exception $e) {
+            return redirect()->back()->withError($e->getMessage());
+        } catch (\Illuminate\Database\QueryException $e) {
+            return redirect()->back()->withError('Terjadi kesalahan pada database', $e->getMessage());
+        }
     }
 
     /**

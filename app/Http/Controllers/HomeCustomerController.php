@@ -75,7 +75,7 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getDetailProduct'] = Product::find($product->id);
-            $this->param['getDetailReview'] = Review::where('product_id', $product->id)->get();
+            $this->param['getDetailReview'] = Review::where('product_id', $product->id)->get()->reverse();
             return view('product-detail', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
