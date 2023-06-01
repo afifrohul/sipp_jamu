@@ -29,28 +29,15 @@ use App\Http\Controllers\SellerTransactionController;
 |
 */
 
-// Route::get('/', function () {
-//     // return redirect('/back-login');
-//     return view('home');
-// });
-
-// Route::get('/product', function () {
-//     // return redirect('/back-login');
-//     return view('product');
-// });
-
-Route::get('/product-detail', function () {
+Route::get('/', function () {
     // return redirect('/back-login');
-    return view('product-detail');
+    return view('basic-trigger');
 });
 
-Route::get('/', [HomeCustomerController::class, 'indexHome']);
+Route::get('/home', [HomeCustomerController::class, 'indexHome']);
 Route::get('/product', [HomeCustomerController::class, 'indexProduct']);
 Route::get('/product-detail/{product}', [HomeCustomerController::class, 'show']);
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
 
 Route::get('/back-dashboard', [HomeController::class, 'index'])->name('back-dashboard');
 

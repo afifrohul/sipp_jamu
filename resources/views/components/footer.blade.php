@@ -30,7 +30,7 @@
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">MENU</h2>
         <nav class="list-none mb-10">
           <li>
-            <a href="{{ url('/') }}" class="text-gray-600 hover:text-gray-800">Halaman Utama</a>
+            <a href="{{ url('/home') }}" class="text-gray-600 hover:text-gray-800">Halaman Utama</a>
           </li>
           <li>
             <a href="{{ url('/product') }}" class="text-gray-600 hover:text-gray-800">Produk</a>

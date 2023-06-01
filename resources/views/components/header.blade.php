@@ -28,7 +28,7 @@
 
               <x-slot name="content">
                   <!-- Authentication -->
-                  <x-dropdown-link href="{{ url('/') }}">
+                  <x-dropdown-link href="{{ url('/home') }}">
                       <i class="fad fa-home text-xs mr-1"></i> Halaman Utama
                   </x-dropdown-link>
                   <x-dropdown-link href="{{ url('/product') }}">

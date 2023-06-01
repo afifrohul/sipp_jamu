@@ -27,22 +27,17 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Kuantitas (gram):</label>
-                    <input type="number" id="qty" name="qty" class="form-input w-full block rounded mt-1 p-3 border-2 @error('qty') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('qty')}}">
+                    <input type="number" id="qty" name="qty" class="form-input w-full block rounded mt-1 p-3 border-2 @error('qty') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000">
                     @error('qty')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}
                     </span>
                     @enderror
                 </div>
-                {{-- <div>
-                    <label class="text-gray-700 ml-1">Total Harga:</label>
-                    <input type="number" name="total_price" class="form-input w-full block rounded mt-1 p-3 border-2 @error('total_price') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="5000" value="{{old('total_price')}}" readonly>
-                    @error('total_price')
-                    <span class="pl-1 text-xs text-red-600 text-bold">
-                        {{$message}}
-                    </span>
-                    @enderror
-                </div> --}}
+                <div class="flex">
+                    <h1 class="text-lg mt-2">Total: Rp </h1>
+                    <h1 class="text-lg mt-2" id="total"> </h1>
+                </div>
                 <div class="mt-5">
                     <button type="submit" onclick="return confirm('Apakah ingin menambahkan data ini ?')" class="btn-shadow">Tambah</button>
                 </div>
@@ -50,6 +45,9 @@
         </div>
     </div>
 </div>
+
+
+
 <script>
     images.onchange = evt => {
         const [file] = images.files;
@@ -62,14 +60,23 @@
 @endsection
 @section('extraJS')
 <script>
-    var material = document.getElementById("material")
-    var text = material.options[1].innerHTML.split(' ')
-    var price = parseInt( text[text.length - 1])
-    
-    var qty = document.getElementById('qty')
+  var materialSelect = document.getElementById("material");
+  var qtyInput = document.getElementById("qty");
+  var totalHarga = document.getElementById("total");
 
-    var total = price * parseInt(qty.value)/1000
+  materialSelect.addEventListener("change", hitungTotal);
 
+  qtyInput.addEventListener("input", hitungTotal);
 
+  function hitungTotal() {
+    var text = material.options[material.selectedIndex].innerHTML.split(' ');
+    var qty = qtyInput.value;
+
+    var harga = parseInt( text[text.length - 1]);
+
+    var total = harga * qty/1000;
+
+    totalHarga.innerHTML = total;
+  }
 </script>
 @endsection
