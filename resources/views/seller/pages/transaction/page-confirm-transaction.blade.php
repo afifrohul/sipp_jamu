@@ -52,8 +52,8 @@
                     @if ($getDetailTransaction->status_accept == 'pending')
                         <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') selected @endif>Pending</option>
                         <option value="accept" @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
-                        <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') selected @endif>Terima</option>
-                        <option value="paid" @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Terima</option>
+                        <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') selected @endif>Tolak</option>
+                        <option value="paid" @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
                     @endif
                     @if ($getDetailTransaction->status_accept == 'accept')
                         
