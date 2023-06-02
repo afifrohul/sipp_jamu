@@ -55,7 +55,7 @@
                         <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') seleccted @endif>Sudah Bayar</option>
                     </select>
                 </div>
-                <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center">
+                {{-- <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center">
                     <div>
                         <label class="text-gray-700 ml-1">Bukti Pembayaran : </label>
                         <div class='flex items-center justify-center w-full mt-2'>
@@ -66,7 +66,7 @@
                             </label>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="mt-5 flex gap-4">
                     <button type="submit" onclick="return confirm('Apakah ingin menyimpan perubahan ?')"class="btn-shadow">Selesai</button>
                 </div>

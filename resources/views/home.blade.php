@@ -30,6 +30,20 @@
                 </button>
             </div>
             @endif
+            @php
+                $array = $getCountMaterialStock->toArray();
+            @endphp
+            @if (min($array) < 5000 )
+            <div class="alert alert-default mb-5 flex justify-between">
+                <div class="flex gap-2 items-center">
+                    <i class="fad fa-bell-on text-lg"></i>
+                    <p class="text-base"><strong>Halo, {{ Auth::user()->name }}.</strong>Terdapat stok bahan baku yang menipis. <a class="font-bold hover:opacity-75 transition-all duration-300" href="{{ url('/back-seller/material') }}">Klik disini untuk melihat.</a> </p>
+                </div>
+                <button class="alert-btn-close">
+                    <i class="fad fa-times text-lg"></i>
+                </button>
+            </div>
+            @endif
         @endif
         @if (\Auth::user()->roles->pluck('name')[0] == 'customer')
             @if ($getTransactionAccept > 0)

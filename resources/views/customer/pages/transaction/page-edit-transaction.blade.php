@@ -9,7 +9,7 @@
             <p class="text-xs">Ubah status pesanan menjadi cancel untuk membatalkan pesanan.</p>
             @endif
             @if ($getDetailTransaction->status_accept == 'accept')
-            <h1 class="h6">Upload Bukti Transaksi Pesanan Pesanan</h1>
+            <h1 class="h6">Upload Bukti Transaksi Pesanan</h1>
             <p class="text-xs">Upload Bukti Transaksi ke 0012910201291021 a/n Afif Rohul.</p>
             @endif
         </div>

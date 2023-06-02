@@ -23,6 +23,7 @@ class HomeCustomerController extends Controller
             $this->param['getNewTransactionFarmer'] = FarmerTransaction::where('status_accept', 'pending')->count();
             $this->param['getNewTransactionSeller'] = SellerTransaction::where('status_accept', 'pending')->count();
             $this->param['getTransactionAccept'] = SellerTransaction::where('status_accept', 'accept')->where('prove_payment', null)->count();
+            $this->param['getCountMaterialStock'] = Material::where('user_id', auth()->user()->id)->pluck('stock');
             $this->param['getAllReview'] = Review::where('rating','>', '3')->take(3)->get();
             return view('home', $this->param);
             // return view('basic-trigger', $this->param);

@@ -27,6 +27,7 @@ class SellerDashboardController extends Controller
         try {
             $this->param['getCountProduct'] = Product::where('seller_id', auth()->user()->id)->count();
             $this->param['getCountMaterial'] = Material::where('user_id', auth()->user()->id)->count();
+            $this->param['getCountMaterialStock'] = Material::where('user_id', auth()->user()->id)->pluck('stock');
             $this->param['getCountTransaction'] = SellerTransaction::all()->count();
             $this->param['getCountTransactionPending'] = SellerTransaction::where('status_accept', 'pending')->count();
             

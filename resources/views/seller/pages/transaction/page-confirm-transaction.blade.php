@@ -49,15 +49,12 @@
                 <div>
                     <label class="text-gray-700 ml-1">Status Pesanan: </label>
                     <select name="status_accept" class="form-input mt-1 p-3 border-2 @error('tag') border-red-500 @enderror focus:outline-none focus:border-teal-500 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0" readonly>
-                    @if ($getDetailTransaction->status_accep == 'pending')
+                    @if ($getDetailTransaction->status_accept == 'pending')
                         <option value="pending" @if ($getDetailTransaction->status_accept == 'pending') selected @endif>Pending</option>
-                        <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
-                        <option value="decline" @if ($getDetailTransaction->status_accept == 'decline') selected @endif>Tolak</option>
                     @endif
-                    @if ($getDetailTransaction->status_accep == 'accept')
+                    @if ($getDetailTransaction->status_accept == 'accept')
                         
                     <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
-                    <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
                     @endif
                     </select>
                 </div>
