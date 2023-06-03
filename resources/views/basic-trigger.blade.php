@@ -20,8 +20,8 @@
   </div>
 
   {{-- Feature --}}
-  <div class='container px-16 mt-12'>
-        <div class='font-bold text-gray-800 text-3xl md:text-4xl'>
+  <div class='container px-16 pt-12 bg-[url("https://images.unsplash.com/photo-1616319708901-52d9b189d74c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80")] bg-cover'>
+        <div class='font-bold text-gray-100 text-3xl md:text-4xl'>
             Keuggulan <br /> Jamu Secara Umum
         </div>
         <div>
@@ -30,7 +30,7 @@
             <span class='inline-block mr-2 w-1 h-1 rounded-full bg-[rgb(16,185,129)]'></span>
         </div>
         <div class='grid grid-cols-1 pt-10 pb-20 md:grid-cols-2 xl:grid-cols-4 gap-8'>
-            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300'>
+            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300 bg-gray-100'>
                 <div class='p-10'>
                     {{-- <RiFilePaper2Line class='h-12 w-12 text-[rgb(16,185,129)]'/> --}}
                     <h3 class='pt-5 pb-2 font-bold text-2xl text-gray-700'>Sumber bahan alami</h3>
@@ -40,7 +40,7 @@
                     </div> --}}
                 </div>
             </div>
-            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300'>
+            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300 bg-gray-100'>
                 <div class='p-10'>
                     {{-- <RiNewspaperLine class='h-12 w-12 text-[rgb(16,185,129)]'/> --}}
                     <h3 class='pt-5 pb-2 font-bold text-2xl text-gray-700'>Tradisi yang kuat</h3>
@@ -50,7 +50,7 @@
                     </div> --}}
                 </div>
             </div>
-            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300'>
+            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300 bg-gray-100'>
                 <div class='p-10'>
                     {{-- <TbPuzzle class='h-12 w-12 text-[rgb(16,185,129)]'/> --}}
                     <h3 class='pt-5 pb-2 font-bold text-2xl text-gray-700'>Pendekatan holistik</h3>
@@ -60,7 +60,7 @@
                     </div> --}}
                 </div>
             </div>
-            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300'>
+            <div class='border-[2px] rounded-xl border-green-400 dark:border-green-300 bg-gray-100'>
                 <div class='p-10'>
                     {{-- <TbCertificate class='h-12 w-12 text-[rgb(16,185,129)]'/> --}}
                     <h3 class='pt-5 pb-2 font-bold text-2xl text-gray-700'>Tersedia dalam berbagai bentuk</h3>
@@ -129,24 +129,25 @@
       </div>
     </div>
 
-    <div class='container px-16'>
+    {{-- <div class='container px-16'> --}}
+    <div class='container px-16 bg-[url("https://images.unsplash.com/photo-1616225273962-05c320ca73d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80")] bg-cover'>
         <div class='py-10'>
             <div class='text-center max-w-lg mx-auto'>
-                <h1 class='text-3xl font-bold pb-4 text-gray-700'>Khasiat Jamu</h1>
-                <p class='text-gray-500'>Cari tahu berbagai informasi tentang manfaat berbagai jenis jamu.</p>
+                <h1 class='text-3xl font-bold pb-4 text-gray-100'>Khasiat Jamu</h1>
+                <p class='text-gray-100 font-semibold'>Cari tahu berbagai informasi tentang manfaat berbagai jenis jamu.</p>
             </div>
             <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-10'>
-                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl'>
+                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl bg-gray-100'>
                     {{-- <img class='w-full rounded-lg' src="https://th.bing.com/th/id/OIP.UX9k4Dcx7kKXy5hmhqryCQHaDt?w=292&h=174&c=7&r=0&o=5&pid=1.7" alt="" /> --}}
                     <h1 class='text-xl font-bold pt-4 pb-2 text-gray-700'>SINOM</h1>
                     <p class='text-gray-500 pb-4'>Sinom adalah Jamu tradisional khas jawa yang terbuat dari campuran air, asam Jawa, daun asam muda alias sinom, gula asli dan juga kunyit. Sinom memiliki banyak manfaat bagi kesehatan, yaitu bisa digunakan untuk melancarkan peredaran darah, meredakan rasa sakit, mengurangi radang dan nyeri persendian, meredakan batuk dan demam, hingga bisa digunakan untuk melangsingkan tubuh.</p>  
                 </div>
-                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl'>
+                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl bg-gray-100'>
                     {{-- <img class='w-full rounded-lg' src="https://th.bing.com/th/id/OIP.UX9k4Dcx7kKXy5hmhqryCQHaDt?w=292&h=174&c=7&r=0&o=5&pid=1.7" alt="" /> --}}
                     <h1 class='text-xl font-bold pt-4 pb-2 text-gray-700'>BERAS KENCUR</h1>
                     <p class='text-gray-500 pb-4'>Beras kencur adalah Jamu tradisional khas jawa yang terbuat dari beras, kencur, jahe, gula jawa, gula pasir, garam, daun pandan, dan air. Beras kencur dapat membantu meredakan gangguan pencernaan seperti perut kembung, mual, dan muntah-muntah. Kencur memiliki sifat antiperut yang membantu mengurangi ketidaknyamanan dan membantu proses pencernaan.</p>  
                 </div>
-                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl'>
+                <div class=' mx-auto rounded-lg p-4 hover:scale-105 duration-500 shadow-lg hover:shadow-2xl bg-gray-100'>
                     {{-- <img class='w-full rounded-lg' src="https://th.bing.com/th/id/OIP.UX9k4Dcx7kKXy5hmhqryCQHaDt?w=292&h=174&c=7&r=0&o=5&pid=1.7" alt="" /> --}}
                     <h1 class='text-xl font-bold pt-4 pb-2 text-gray-700'>TEMULAWAK</h1>
                     <p class='text-gray-500 pb-4'>Temulawak mengandung senyawa kurkuminoid yang memiliki sifat antiinflamasi dan antioksidan. Senyawa ini membantu mengurangi peradangan dalam tubuh dan melindungi sel-sel dari kerusakan oksidatif. Konsumsi jamu temulawak secara teratur dapat membantu mengurangi risiko penyakit inflamasi dan meningkatkan kesehatan secara keseluruhan.</p>  

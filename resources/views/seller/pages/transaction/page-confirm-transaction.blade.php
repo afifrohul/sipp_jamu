@@ -58,7 +58,7 @@
                     @if ($getDetailTransaction->status_accept == 'accept')
                         
                     <option value="accept"  @if ($getDetailTransaction->status_accept == 'accept') selected @endif>Terima</option>
-                    <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Terima</option>
+                    <option value="paid"  @if ($getDetailTransaction->status_accept == 'paid') selected @endif>Sudah Bayar</option>
                     @endif
                     </select>
                 </div>

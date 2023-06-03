@@ -26,7 +26,7 @@ class SellerTransaction extends Model
         
 
         static::saved(function ($transaksi) {
-            if ($transaksi->status_accept === 'cancel') {
+            if ($transaksi->status_accept === 'cancel' || $transaksi->status_accept === 'decline') {
                 $product = Product::find($transaksi->product_id);
                 $product->stock += $transaksi->qty;
                 $product->save();
