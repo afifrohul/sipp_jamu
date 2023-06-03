@@ -20,8 +20,8 @@
   </div>
 
   {{-- Feature --}}
-  <div class='container px-16 pt-12 bg-[url("https://images.unsplash.com/photo-1616319708901-52d9b189d74c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80")] bg-cover'>
-        <div class='font-bold text-gray-100 text-3xl md:text-4xl'>
+  <div class='container px-16 pt-12'>
+        <div class='font-bold text-gray-700 text-3xl md:text-4xl'>
             Keuggulan <br /> Jamu Secara Umum
         </div>
         <div>
