@@ -25,7 +25,8 @@
       <p class="mt-2 text-sm text-gray-500">Jl. Kalimantan No. 37, Sumbersari, Kecamatan Sumbersari, Jember, Jawa Timur, 68121. </p>
     </div>
     <div class="px-4 flex">
-      
+      @auth
+          
       <div class="px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">MENU</h2>
         <nav class="list-none mb-10">
@@ -40,6 +41,7 @@
           </li>
         </nav>
       </div>
+      @endauth
       <div class="px-4">
         <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">MEDIA SOSIAL</h2>
         <nav class="list-none mb-10">
