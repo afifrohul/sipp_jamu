@@ -20,6 +20,7 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getAllProduct'] = Product::where('stock', '>', '0')->take(3)->get();
+            $this->param['getAllProductStock'] = Product::pluck('stock');
             $this->param['getNewTransactionFarmer'] = FarmerTransaction::where('status_accept', 'pending')->count();
             $this->param['getNewTransactionSeller'] = SellerTransaction::where('status_accept', 'pending')->count();
             $this->param['getTransactionAccept'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'accept')->where('prove_payment', null)->count();
@@ -38,6 +39,7 @@ class HomeCustomerController extends Controller
     {
         try {
             $this->param['getAllProduct'] = Product::where('stock', '>', '0')->get();
+            $this->param['getAllProductStock'] = Product::pluck('stock');
             return view('product', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

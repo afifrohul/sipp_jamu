@@ -29,7 +29,7 @@
                 </div>
                 <div>
                     <label class="text-gray-700 ml-1">Stok (gram): </label>
-                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="Lorem Ipsum" value="{{ old('stock',$getDetailMaterial->stock)}}">
+                    <input type="number" name="stock" class="form-input w-full block rounded mt-1 p-3 border-2 @error('stock') border-red-500 @enderror focus:outline-none focus:border-yellow-500" placeholder="100" value="{{ old('stock',$getDetailMaterial->stock)}}">
                     @error('stock')
                     <span class="pl-1 text-xs text-red-600 text-bold">
                         {{$message}}

@@ -111,7 +111,6 @@ class ProfileController extends Controller
             $user->full_name = $request->full_name;
             $user->no_hp = $request->no_hp;
             $user->address = $request->address;
-            $user->description = $request->description;
             if ($request->file('image')) {
                 $request->file('image')->move('assets/upload/user', $date.$random.$request->file('image')->getClientOriginalName());
                 $user->image = $date.$random.$request->file('image')->getClientOriginalName();

@@ -27,6 +27,12 @@
 
     <section class="container px-6 py-8 mx-auto lg:py-16" id="product">
         {{-- <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3> --}}
+        @php
+            $array = $getAllProductStock->toArray();
+        @endphp
+        @if (array_sum($array) == 0)
+            <p class="text-center text-2xl mx-auto">Produk tidak tersedia.</p>
+        @endif
         <div class="grid grid-cols-4 gap-4 mt-6">
             @foreach ($getAllProduct as $item)
             <form action="{{url('/product-detail',$item->id)}}" method="GET" class="inline">

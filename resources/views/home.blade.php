@@ -157,6 +157,14 @@
 
     <section class="container px-6 py-8 mx-auto lg:py-16">
     <h3 class="text-xl font-medium text-gray-800 md:text-2xl lg:text-3xl text-center">Produk unggulan kami</h3>
+    @php
+        $arrayStock = $getAllProductStock->toArray();
+    @endphp
+    @if (array_sum($arrayStock) == 0)
+        <p class="text-center text-2xl mt-10 mx-auto">Produk tidak tersedia.</p>
+    @endif
+    @if (array_sum($arrayStock) != 0)
+    
     <div class="grid grid-cols-3 gap-4 mt-6">
         @foreach ($getAllProduct as $item)
             <form action="{{url('/product-detail',$item->id)}}" method="GET" class="inline">
@@ -175,9 +183,11 @@
             </form>
         @endforeach
     </div>
+    
     <h3 class="mt-6 text-end">
         <a href="{{ url('/product') }}" class="inline-block font-semibold mr-10 text-lg text-gray-400 hover:translate-x-7 hover:italic duration-300">Lihat Semua Produk <svg xmlns="http://www.w3.org/2000/svg" class="w-4 inline" fill="#9ca3af" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M429.6 92.1c4.9-11.9 2.1-25.6-7-34.7s-22.8-11.9-34.7-7l-352 144c-14.2 5.8-22.2 20.8-19.3 35.8s16.1 25.8 31.4 25.8H224V432c0 15.3 10.8 28.4 25.8 31.4s30-5.1 35.8-19.3l144-352z"/></svg></a>
     </h3>
+    @endif
 </section>
     
 <section class="text-gray-600 body-font">

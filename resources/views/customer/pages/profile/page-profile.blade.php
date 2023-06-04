@@ -17,15 +17,15 @@
           <p class="ml-1">{{ $getDetailUser[0]->name }}</p>
           <p class="text-gray-700 ml-1 mt-2 font-semibold ">Nama Lengkap:</p>
           <p class="ml-1">{{ $getDetailUser[0]->full_name }}</p>
-          <p class="text-gray-700 ml-1 mt-2 font-semibold ">No HP:</p>
+          <p class="text-gray-700 ml-1 mt-2 font-semibold ">No Telepon:</p>
           <p class="ml-1">{{ $getDetailUser[0]->no_hp }}</p>
           <p class="text-gray-700 ml-1 mt-2 font-semibold ">Alamat:</p>
           <p class="ml-1">{{ $getDetailUser[0]->address }}</p>
-          <p class="text-gray-700 ml-1 mt-2 font-semibold ">Deskripsi:</p>
-          <p class="ml-1">{{ $getDetailUser[0]->description }}</p>
+          <p class="text-gray-700 ml-1 mt-2 font-semibold ">Email:</p>
+          <p class="ml-1">{{ $getDetailUser[0]->email }}</p>
           <div class="mt-3 grid grid-cols-2 gap-6 xl:grid-cols-1 items-center"> 
             <div>
-                <label class="text-gray-700 ml-1">Avatar : </label>
+                <label class="text-gray-700 ml-1">Foto : </label>
                 <div class='flex items-center justify-center w-1/2 mt-2'>
                     <label class='flex flex-col border-4 border-dashed w-full h-auto border-yellow-500 group bg-gray-300'>
                             <div class='flex flex-col items-center justify-center py-1'>

@@ -83,6 +83,11 @@
           <div class="w-full">
             {{-- <label class="text-gray-700 ml-1">Rating:</label> --}}
             <input type="number" step="0.1" min="1" max="5" name="rating" class="form-input w-full block rounded mt-1 p-3 border-2 @error('rating') border-red-500 @enderror focus:outline-none focus:border-green-500" placeholder="Rating Produk (1-5)" value="{{old('rating')}}" >
+            @error('rating')
+            <span class="pl-1 text-xs text-red-600 text-bold">
+                {{$message}}
+            </span>
+            @enderror
           </div>
           <div class="flex mt-3 justify-end">
             <button type="submit" onclick="return confirm('Tambahkan ulasan baru ?')" class="text-white bg-green-500 border-0 py-2 px-4 focus:outline-none hover:bg-green-600 rounded"><p class="text-base">Tambah</p></button>

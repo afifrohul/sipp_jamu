@@ -51,14 +51,14 @@
                             <div>
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="full_name" :value="__('Nama Lengkap')" />
 
-                                <x-input id="full_name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="full_name" :value="old('full_name')" required autofocus placeholder="Lorem Ipsum"  />
+                                <x-input id="full_name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="full_name" :value="old('full_name')" required autofocus placeholder="Nama Lengkap"  />
                             </div>
                             
                             <!-- Name -->
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="name" :value="__('Nama Pengguna')" />
 
-                                <x-input id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="name" :value="old('name')" required autofocus placeholder="Lorem Ipsum" />
+                                <x-input id="name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="name" :value="old('name')" required autofocus placeholder="Username" />
                             </div>
                             
                             <!-- No HP -->
@@ -72,7 +72,7 @@
                             <div class="">
                                 <x-label class="block mb-2 text-sm font-medium text-gray-900" for="address" :value="__('Alamat')" />
 
-                                <x-input id="address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="address" :value="old('address')" required autofocus placeholder="Lorem Ipsum" />
+                                <x-input id="address" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" type="text" name="address" :value="old('address')" required autofocus placeholder="Provinsi, Kabupaten, Kecamatan, Kode Pos, Nama Jalan, No rumah" />
                             </div>
 
                             <!-- Email Address -->
