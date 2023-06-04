@@ -40,7 +40,10 @@ class SellerTransactionController extends Controller
     public function indexCustomer()
     {
         try {
-            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get()->reverse();
+            // $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'accept')->orWhere('status_accept', 'pending')->get()->reverse();
+            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where(function ($query) {
+                $query->where('status_accept', 'accept')->orWhere('status_accept', 'pending');
+            })->get()->reverse();
             return view('customer.pages.transaction.page-list-transaction', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
@@ -52,7 +55,10 @@ class SellerTransactionController extends Controller
     public function historyCustomer()
     {
         try {
-            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'paid')->orWhere('status_accept', 'decline')->orWhere('status_accept', 'cancel')->get()->reverse();
+            // $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'paid')->orWhere('status_accept', 'decline')->orWhere('status_accept', 'cancel')->get()->reverse();
+            $this->param['getAllTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->where(function ($query) {
+                $query->where('status_accept', 'paid')->orWhere('status_accept', 'decline')->orWhere('status_accept', 'cancel');
+            })->get()->reverse();
             return view('customer.pages.transaction.page-list-history-transaction', $this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

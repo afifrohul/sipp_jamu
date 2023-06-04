@@ -19,7 +19,7 @@ class CustomerDashboardController extends Controller
         try {
             $this->param['getCountTransaction'] = SellerTransaction::where('user_id', \Auth::user()->id)->count();
             $this->param['getCountReview'] = Review::where('customer_id', \Auth::user()->id)->count();
-            $this->param['getCountTransactionAccept'] = SellerTransaction::where('status_accept', 'accept')->where('prove_payment', null)->count();
+            $this->param['getCountTransactionAccept'] = SellerTransaction::where('user_id', \Auth::user()->id)->where('status_accept', 'accept')->where('prove_payment', null)->count();
             return view('customer.pages.dashboard.dashboard',$this->param);
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());

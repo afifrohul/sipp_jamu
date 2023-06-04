@@ -160,9 +160,9 @@
     <div class='px-6 py-20 max-w-xl xl:max-w-7xl mx-auto flex flex-col xl:flex-row gap-10 justify-center items-center'>
       <div class='xl:w-3/5'>
         <h1 class='text-3xl md:text-4xl font-bold text-gray-700'>Hey, Tertarik bergabung dengan kami?</h1>
-        <p class='py-10 text-gray-400 md:text-xl'>Kami tunggu kedatangan Anda!</p>
+        <p class='py-10 text-gray-400 md:text-xl'>Hubungi kami pada media sosial dibawah!</p>
       </div>
-      <div class='bg-white p-8 rounded-lg shadow-2xl w-full xl:w-2/5'>
+      {{-- <div class='bg-white p-8 rounded-lg shadow-2xl w-full xl:w-2/5'>
         <form action="">
           <p class='py-2 font-semibold text-black'>Nama</p>
           <input
@@ -174,7 +174,7 @@
           type="email" placeholder='email@example.org'/>
           <h1 class='text-center text-gray-100 bg-green-600 hover:bg-green-700 rounded-md py-2 text-lg mt-4 shadow-base'>Kirim</h1>
         </form>
-      </div>
+      </div> --}}
     </div>
     </div>
 

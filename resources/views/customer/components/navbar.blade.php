@@ -17,7 +17,13 @@
             <div class="dropdown relative md:static">
                 <button class="menu-btn focus:outline-none flex flex-wrap items-center">
                     <div class="w-8 h-8 overflow-hidden rounded-full">
+                        @if (Auth::user()->image != null)
+                            
                         <img class="w-full h-full object-cover" src="{{asset('assets/upload/user/'. Auth::user()->image)}}" >
+                        @endif
+                        @if (Auth::user()->image == null)
+                        <img class="w-full h-full object-cover" src="{{asset('assets/upload/user/default.png')}}" >
+                        @endif
                     </div> 
 
                     <div class="ml-2 capitalize flex ">
